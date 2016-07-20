@@ -2,19 +2,19 @@ package com.imagine.scott.netcar.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.amap.api.maps.MapView;
+import com.amap.api.services.poisearch.PoiResult;
 import com.imagine.scott.netcar.R;
 import com.imagine.scott.netcar.adapter.QueryPositionListAdapter;
 
@@ -51,27 +51,32 @@ public class QueryPositionActivity extends AppCompatActivity {
         queryPositionList.setHasFixedSize(true);
         queryPositionMapViewDialog = new BottomSheetDialog(this);
 
-        queryPositionStart.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        queryPositionStart.setOnEditorActionListener(sfOnEditorActionListener);
+        queryPositionFinish.setOnEditorActionListener(sfOnEditorActionListener);
+        queryPositionSwap.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    return true;
-                }
-                return false;
+            public void onClick(View view) {
+                queryPositionStart.setText(finishPositionName);
+                queryPositionFinish.setText(startPositionName);
+                startPositionName = queryPositionStart.getText().toString();
+                finishPositionName = queryPositionFinish.getText().toString();
+                double temp;
             }
         });
     }
 
-    TextView.OnEditorActionListener() {
+    TextView.OnEditorActionListener sfOnEditorActionListener = new TextView.OnEditorActionListener() {
         @Override
         public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-            if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                attemptLogin();
+            if (id == R.id.search_start || id == R.id.search_finish) {
+                searchPosition("");
                 return true;
             }
             return false;
         }
-    }
+    };
 
+    public void searchPosition(String keyWord) {
+
+    }
 }

@@ -29,6 +29,7 @@
                 android:id="@+id/query_position_sf_form"
                 android:orientation="vertical"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_toStartOf="@id/query_position_swap"
                 android:layout_toLeftOf="@id/query_position_swap"
                 android:layout_width="match_parent"
@@ -51,6 +52,8 @@
 
                     <EditText
                         android:id="@+id/query_position_start"
+                        android:inputType="text"
+                        android:imeActionId="@+id/search_start"
                         android:paddingTop="8dp"
                         android:paddingBottom="8dp"
                         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -76,6 +79,8 @@
 
                     <EditText
                         android:id="@+id/query_position_finish"
+                        android:inputType="text"
+                        android:imeActionId="@+id/search_finish"
                         android:paddingTop="8dp"
                         android:paddingBottom="8dp"
                         android:paddingLeft="@dimen/activity_horizontal_margin"
