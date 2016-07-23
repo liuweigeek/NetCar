@@ -50,6 +50,7 @@
 
                     <EditText
                         android:id="@+id/query_position_start"
+                        android:textSize="16sp"
                         android:inputType="text"
                         android:hint="输入起点"
                         android:imeActionId="@+id/search_start"
@@ -79,6 +80,7 @@
 
                     <EditText
                         android:id="@+id/query_position_finish"
+                        android:textSize="16sp"
                         android:inputType="text"
                         android:hint="输入终点"
                         android:imeActionId="@+id/search_finish"

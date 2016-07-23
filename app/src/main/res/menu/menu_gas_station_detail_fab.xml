@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.imagine.scott.netcar.activity.GasStationDetailActivity">
+    <item
+        android:id="@+id/fab_action_go"
+        android:icon="@drawable/ic_fab_go"
+        android:orderInCategory="100"
+        android:title="到这里"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/fab_action_appo"
+        android:icon="@drawable/ic_fab_appo"
+        android:orderInCategory="100"
+        android:title="预约"
+        app:showAsAction="never" />
+</menu>

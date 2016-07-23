@@ -1,5 +1,24 @@
-<com.amap.api.maps.MapView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/select_sf_mapview"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="wrap_content">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/select_sf_mapview"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"/>
+
+    <Button
+        android:id="@+id/select_sf_point"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
