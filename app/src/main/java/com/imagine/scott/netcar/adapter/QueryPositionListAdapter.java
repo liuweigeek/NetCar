@@ -8,12 +8,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amap.api.services.core.PoiItem;
 import com.imagine.scott.netcar.R;
 import com.imagine.scott.netcar.activity.MainActivity;
+import com.imagine.scott.netcar.activity.QueryPositionActivity;
+import com.imagine.scott.netcar.activity.SearchedListActivity;
 import com.imagine.scott.netcar.bean.UserCar;
 import com.imagine.scott.netcar.fragment.BreakRulesFragment;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,18 +25,12 @@ import java.util.List;
  */
 public class QueryPositionListAdapter extends RecyclerView.Adapter<QueryPositionListAdapter.ViewHolder> {
 
-/*    private final int mBackground;
-    private final TypedValue mTypedValue = new TypedValue();*/
+    private ArrayList<PoiItem> poiItems;
+    private QueryPositionActivity queryPositionActivity;
 
-    private BreakRulesFragment breakRulesFragment;
-    private List<UserCar> userCars;
-
-
-    public QueryPositionListAdapter(BreakRulesFragment breakRulesFragment, List<UserCar> userCars) {
-        this.breakRulesFragment = breakRulesFragment;
-        this.userCars = userCars;
-/*        MainActivity.mainActivity.getTheme().resolveAttribute(R.attr.selectableItemBackground, mTypedValue, true);
-        mBackground = mTypedValue.resourceId;*/
+    public QueryPositionListAdapter(QueryPositionActivity queryPositionActivity) {
+        this.queryPositionActivity = queryPositionActivity;
+        this.poiItems = queryPositionActivity.poiItems;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -48,38 +46,26 @@ public class QueryPositionListAdapter extends RecyclerView.Adapter<QueryPosition
     public QueryPositionListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View listItem = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_usercar, parent, false);
+                .inflate(R.layout.item_query_position, parent, false);
         ViewHolder vh = new ViewHolder(listItem);
         return vh;
     }
 
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
-        ImageView itemUsercarLogo = (ImageView)holder.listItem.findViewById(R.id.item_usercar_logo);
-        TextView itemUsercarLicense = (TextView)holder.listItem.findViewById(R.id.item_usercar_license);
-        TextView itemUsercarInfo = (TextView)holder.listItem.findViewById(R.id.item_usercar_info);
-        itemUsercarLicense.setText(userCars.get(position).getLicensePlateNumber());
-
-        UserCar userCar = userCars.get(position);
-        itemUsercarLicense.setText(userCar.getLicensePlateNumber());
-        itemUsercarInfo.setText(userCar.getCar().getVehicleBrandZh() + " " + userCar.getCar().getVehicleModel());
-
-        String url = MainActivity.mainActivity.addrPreferences.getString("IP", null);
-        if (!TextUtils.isEmpty(url)) {
-            StringBuffer logourl = new StringBuffer("http://" + url + "/NetCar/carlogo/" + userCar.getCar().getVehicleBrand() + ".png");
-            Picasso.with(itemUsercarLogo.getContext()).load(logourl.toString()).into(itemUsercarLogo);
-        }
+        TextView itemSearchedName = (TextView) holder.listItem.findViewById(R.id.item_query_position_name);
+        itemSearchedName.setText(poiItems.get(position).getTitle());
 
         holder.listItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                breakRulesFragment.onCarItemSelected(position);
+                queryPositionActivity.selected(position);
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return userCars.size();
+        return queryPositionActivity.poiItems.size();
     }
 }

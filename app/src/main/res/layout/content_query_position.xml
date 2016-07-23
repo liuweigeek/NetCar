@@ -30,8 +30,6 @@
                 android:orientation="vertical"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_toStartOf="@id/query_position_swap"
-                android:layout_toLeftOf="@id/query_position_swap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -53,7 +51,9 @@
                     <EditText
                         android:id="@+id/query_position_start"
                         android:inputType="text"
+                        android:hint="输入起点"
                         android:imeActionId="@+id/search_start"
+                        android:imeOptions="actionSearch"
                         android:paddingTop="8dp"
                         android:paddingBottom="8dp"
                         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -80,7 +80,9 @@
                     <EditText
                         android:id="@+id/query_position_finish"
                         android:inputType="text"
+                        android:hint="输入终点"
                         android:imeActionId="@+id/search_finish"
+                        android:imeOptions="actionSearch"
                         android:paddingTop="8dp"
                         android:paddingBottom="8dp"
                         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -98,11 +100,13 @@
                 android:foregroundGravity="center"
                 android:paddingLeft="6dp"
                 android:paddingRight="6dp"
+                android:layout_toStartOf="@id/query_position_sf_form"
+                android:layout_toLeftOf="@id/query_position_sf_form"
                 android:layout_alignTop="@id/query_position_sf_form"
                 android:layout_alignBottom="@id/query_position_sf_form"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content" />
 
         </RelativeLayout>
