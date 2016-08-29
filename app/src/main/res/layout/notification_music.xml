@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/notifi_music_form"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_music_logo"
+            android:layout_marginRight="4dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+        <TextView
+            android:id="@+id/notifi_music_name"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_toStartOf="@id/notifi_music_form"
+        android:layout_toLeftOf="@id/notifi_music_form"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/notifi_music_rewind"
+            android:src="@drawable/ic_music_previous"
+            android:background="#00ffffff"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <ImageButton
+            android:id="@+id/notifi_music_play"
+            android:src="@drawable/ic_music_play"
+            android:background="#00ffffff"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <ImageButton
+            android:id="@+id/notifi_music_foward"
+            android:src="@drawable/ic_music_next"
+            android:background="#00ffffff"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+</RelativeLayout>
