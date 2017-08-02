@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2DBE60</color>
+    <color name="colorPrimaryDark">#1E7F40</color>
+    <color name="colorAccent">#2DBE60</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="radiusFillColor">#C1E0EE</color>
+    <color name="strokeColor">#A4CEE2</color>
+    <color name="itemSelectedColor">#C1E0EE</color>
+    <color name="color_text_schedule">#99CC00</color>
+
+    <color name="swipe_color_1">#B6DB49</color>
+    <color name="swipe_color_2">#99CC00</color>
+    <color name="swipe_color_3">#8ABD00</color>
+    <color name="swipe_color_4">#7CAF00</color>
+</resources>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.QueryBreakRulesActivity"
+    tools:showIn="@layout/activity_query_break_rules">
+
+    <ScrollView
+        android:id="@+id/query_break_rules_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:background="@color/colorWhite"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/query_break_rules_region_goto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="查询地"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:drawableStart="@drawable/ic_text_region"
+                            android:drawableLeft="@drawable/ic_text_region"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingStart="@dimen/activity_horizontal_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingEnd="0dp"
+                            android:paddingRight="0dp"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/query_break_rules_region"
+                            android:hint="选择查询目的地"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical|end"
+                            android:lines="1"
+                            android:layout_centerVertical="true"
+                            android:drawableEnd="@drawable/ic_text_goto"
+                            android:drawableRight="@drawable/ic_text_goto"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingStart="0dp"
+                            android:paddingLeft="0dp"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="车牌号"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/ic_text_mycar"
+                            android:drawableLeft="@drawable/ic_text_mycar"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingStart="@dimen/activity_horizontal_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingEnd="0dp"
+                            android:paddingRight="0dp"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical|end">
+
+                            <EditText
+                                android:id="@+id/query_break_rules_license"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@color/colorWhite"
+                                android:gravity="center_vertical|end"
+                                android:hint="请输入车牌号"
+                                android:maxLength="6"
+                                android:lines="1"
+                                android:layout_centerVertical="true"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingStart="@dimen/activity_horizontal_margin"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingEnd="@dimen/activity_horizontal_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <Button
+                                android:id="@+id/query_break_rules_select_province"
+                                android:text="晋"
+                                android:maxLength="1"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:background="@color/colorWhite"
+                                android:layout_toStartOf="@id/query_break_rules_license"
+                                android:layout_toLeftOf="@id/query_break_rules_license"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/query_break_rules_vin_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="车架号"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:drawableStart="@drawable/ic_text_vin"
+                            android:drawableLeft="@drawable/ic_text_vin"
+                            android:layout_centerVertical="true"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingStart="@dimen/activity_horizontal_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingEnd="0dp"
+                            android:paddingRight="0dp"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:id="@+id/query_break_rules_vin"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical|end"
+                            android:background="@color/colorWhite"
+                            android:hint="请输入车架号"
+                            android:maxLength="6"
+                            android:lines="1"
+                            android:layout_centerVertical="true"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingStart="0dp"
+                            android:paddingLeft="0dp"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/query_break_rules_enginenum_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="发动机号"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/ic_text_enginewell"
+                            android:drawableLeft="@drawable/ic_text_enginewell"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingStart="@dimen/activity_horizontal_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingEnd="0dp"
+                            android:paddingRight="0dp"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:id="@+id/query_break_rules_enginenum"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|end"
+                            android:hint="请输入车架号后六位"
+                            android:background="@color/colorWhite"
+                            android:maxLength="6"
+                            android:lines="1"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingEnd="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/query_break_rules_query"
+                android:text="开始查询"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorPrimary"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="2dp"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

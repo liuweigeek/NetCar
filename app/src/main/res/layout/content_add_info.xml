@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:showIn="@layout/activity_add_info"
+    tools:context=".activity.AddInfoActivity">
+
+    <ProgressBar
+        android:id="@+id/add_info_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/add_info_form_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.imagine.scott.netcar.widget.CircleImageView
+                android:id="@+id/add_info_headimage"
+                android:src="@drawable/ic_text_nologin_head"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_width="96dp"
+                android:layout_height="96dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="驾龄"
+                            android:textSize="16sp"
+                            android:drawableStart="@drawable/ic_text_drivingyears"
+                            android:drawableLeft="@drawable/ic_text_drivingyears"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/add_info_spinner_drivingyears"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:entries="@array/drivingyears"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </android.support.v7.widget.AppCompatSpinner>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="性别"
+                            android:textSize="16sp"
+                            android:drawableStart="@drawable/ic_text_sex"
+                            android:drawableLeft="@drawable/ic_text_sex"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/add_info_spinner_sex"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:entries="@array/sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/add_info_goto_region"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="城市"
+                            android:textSize="16sp"
+                            android:drawableStart="@drawable/ic_text_region"
+                            android:drawableLeft="@drawable/ic_text_region"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/add_info_text_selectregion"
+                            android:lines="1"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:drawableEnd="@drawable/ic_text_goto"
+                            android:drawableRight="@drawable/ic_text_goto"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/add_info_goto_mycar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="车型"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:drawableStart="@drawable/ic_text_mycar"
+                            android:drawableLeft="@drawable/ic_text_mycar"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/add_info_text_selectcar"
+                            android:lines="1"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:drawableEnd="@drawable/ic_text_goto"
+                            android:drawableRight="@drawable/ic_text_goto"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/set_usercar_info_form_view"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="车牌号"
+                                android:textSize="16sp"
+                                android:drawableStart="@drawable/ic_text_license"
+                                android:drawableLeft="@drawable/ic_text_license"
+                                android:drawablePadding="@dimen/activity_horizontal_margin"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                android:paddingStart="@dimen/activity_horizontal_margin"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingRight="0dp"
+                                android:paddingEnd="0dp"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"/>
+
+                            <EditText
+                                android:id="@+id/set_usercar_info_license"
+                                android:background="@color/colorWhite"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:maxLength="6"
+                                android:gravity="center"
+                                android:hint="输入车牌号"
+                                android:layout_centerVertical="true"
+                                android:paddingStart="0dp"
+                                android:paddingLeft="0dp"
+                                android:paddingEnd="@dimen/activity_horizontal_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:singleLine="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <Button
+                                android:id="@+id/set_usercar_info_select_province"
+                                android:text="晋"
+                                android:textSize="16sp"
+                                android:maxLength="1"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:background="@color/colorWhite"
+                                android:layout_toStartOf="@id/set_usercar_info_license"
+                                android:layout_toLeftOf="@id/set_usercar_info_license"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="车架号"
+                                android:textSize="16sp"
+                                android:drawableStart="@drawable/ic_text_vin"
+                                android:drawableLeft="@drawable/ic_text_vin"
+                                android:drawablePadding="@dimen/activity_horizontal_margin"
+                                android:gravity="center_vertical|start"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"/>
+
+                            <EditText
+                                android:id="@+id/set_usercar_info_vin"
+                                android:inputType="number"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                android:maxLength="6"
+                                android:hint="输入车架号后六位"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                android:background="@color/colorWhite"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:singleLine="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="发动机号"
+                                android:textSize="16sp"
+                                android:drawableStart="@drawable/ic_text_enginewell"
+                                android:drawableLeft="@drawable/ic_text_enginewell"
+                                android:drawablePadding="@dimen/activity_horizontal_margin"
+                                android:gravity="center_vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"/>
+
+                            <EditText
+                                android:id="@+id/set_usercar_info_engine"
+                                android:inputType="number"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:hint="输入发动机号后六位"
+                                android:maxLength="6"
+                                android:gravity="center"
+                                android:background="@color/colorWhite"
+                                android:layout_centerVertical="true"
+                                android:paddingLeft="@dimen/activity_horizontal_margin"
+                                android:paddingBottom="@dimen/activity_vertical_margin"
+                                android:paddingRight="@dimen/activity_horizontal_margin"
+                                android:paddingTop="@dimen/activity_vertical_margin"
+                                android:singleLine="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

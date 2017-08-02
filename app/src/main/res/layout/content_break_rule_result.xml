@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.BreakRuleResultActivity"
+    tools:showIn="@layout/activity_break_rule_result">
+
+    <!-- 结果列表 -->
+	<android.support.v7.widget.RecyclerView
+        android:id="@+id/break_rule_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dp"
+        android:divider="@null" />
+    
+    <!-- 没有违章记录 -->
+	<TextView
+        android:id="@+id/break_rule_result_null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80.0dp"
+        android:gravity="center"
+        android:text="恭喜, 没有查到违章记录！"
+        android:visibility="gone" />   
+
+    <!-- 查询中 -->
+    <FrameLayout
+        android:id="@+id/break_rule_result_popLoader"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:background="#7fffffff">
+
+        <ProgressBar
+            android:id="@+id/break_rule_result_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35.0dp"
+            android:layout_gravity="center" />
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:gravity="center"
+	        android:text="正在查询, 请稍候 ..."/>
+
+    </FrameLayout>
+</LinearLayout>

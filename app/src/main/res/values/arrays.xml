@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="drivingyears">
+        <item>1—3年</item>
+        <item>4—9年</item>
+        <item>10年以上</item>
+    </string-array>
+
+    <string-array name="sex">
+        <item>    男    </item>
+        <item>    女    </item>
+    </string-array>
+    <string-array name="oiltype">
+        <item>93/92号汽油</item>
+        <item>97/95号汽油</item>
+        <item>90号汽油</item>
+        <item>柴油</item>
+    </string-array>
+</resources>

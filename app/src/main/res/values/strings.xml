@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">车联网</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="navigation_menu_map">附近加油站</string>
+    <string name="navigation_menu_gas_station">加油站列表</string>
+    <string name="navigation_menu_appointment">预约记录</string>
+    <string name="navigation_menu_break_rules">违章记录</string>
+    <string name="navigation_menu_cars">我的车辆</string>
+    <string name="navigation_menu_notification">我的消息</string>
+    <string name="navigation_menu_music">我的音乐</string>
+    <string name="navigation_menu_setting">关于</string>
+    <string name="navigation_group_discover">发现</string>
+
+    <string name="action_settings">设置</string>
+    <string name="action_set_server_addr">设置服务端地址</string>
+    <string name="title_activity_user_info">个人信息</string>
+    <string name="title_activity_add_new_car">添加我的车辆</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_register">注册</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_navi">路径导航</string>
+    <string name="title_route_guide_demo">路径导航</string>
+    <string name="title_activity_appo">预约加油</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_phone">手机号</string>
+    <string name="prompt_username">用户名</string>
+    <string name="prompt_password">密码</string>
+    <string name="prompt_confirm_password">确认密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_sign_up">注册</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="action_sign_up_short">注册</string>
+    <string name="action_next_step">下一步</string>
+    <string name="error_invalid_phone">手机号无效</string>
+    <string name="error_invalid_password">密码过短</string>
+    <string name="error_incorrect_password">密码错误</string>
+    <string name="error_field_required">不可为空</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="navi_empty_car">"驾   车"</string>
+    <string name="navi_start">"起    点"</string>
+    <string name="navi_middle">途经点</string>
+    <string name="navi_end">"终    点"</string>
+    <string name="navi_empty_foot">"步   行"</string>
+    <string name="navibar_title">路径规划</string>
+
+    <string name="preference_default_tts_role">xiaoyan</string>
+    <string name="preference_key_tts_speed">tts_speed</string>
+    <string name="preference_title_tts_speed">语速</string>
+    <string name="preference_default_tts_speed">50</string>
+    <string name="preference_dialog_title_tts_speed">选择语速</string>
+    <string name="preference_key_tts_volume">tts_volume</string>
+    <string name="preference_title_tts_volume">音量</string>
+    <string name="preference_default_tts_volume">50</string>
+    <string name="preference_dialog_title_tts_volume">选择音量</string>
+    <string name="preference_key_tts_pitch">tts_pitch</string>
+    <string name="preference_title_tts_pitch">语调</string>
+    <string name="preference_default_tts_pitch">50</string>
+    <string name="intell_bd_title">智能播报</string>
+    <string name="app_id">57327e96</string>
+
+</resources>

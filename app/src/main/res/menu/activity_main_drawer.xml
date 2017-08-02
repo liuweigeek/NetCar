@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_map"
+            android:checked="true"
+            android:icon="@drawable/ic_menu_map"
+            android:title="@string/navigation_menu_map" />
+        <item
+            android:id="@+id/nav_gas_station"
+            android:icon="@drawable/ic_menu_gas_station"
+            android:title="@string/navigation_menu_gas_station" />
+        <item
+            android:id="@+id/nav_appointment"
+            android:icon="@drawable/ic_menu_appointment"
+            android:title="@string/navigation_menu_appointment" />
+        <item
+            android:id="@+id/nav_break_rules"
+            android:icon="@drawable/ic_menu_break_rules"
+            android:title="@string/navigation_menu_break_rules" />
+        <item
+            android:id="@+id/nav_cars"
+            android:icon="@drawable/ic_menu_cars"
+            android:title="@string/navigation_menu_cars" />
+    </group>
+
+    <item android:title="@string/navigation_group_discover">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_notification"
+                    android:icon="@drawable/ic_menu_notification"
+                    android:title="@string/navigation_menu_notification" />
+                <item
+                    android:id="@+id/nav_music"
+                    android:icon="@drawable/ic_menu_music"
+                    android:title="@string/navigation_menu_music" />
+                <item
+                    android:id="@+id/nav_setting"
+                    android:icon="@drawable/ic_menu_setting"
+                    android:title="@string/navigation_menu_setting" />
+            </group>
+        </menu>
+    </item>
+</menu>
