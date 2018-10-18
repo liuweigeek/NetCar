@@ -27,6 +27,7 @@ public class Connection {
     public String uploadParams(String action, String className, Map<String, Object> requestParams) {
         StringBuffer url = new StringBuffer("http://" + MainActivity.mainActivity.addrPreferences.getString("IP", null) + "/NetCar/");
         String requestUrl = url.append(className).toString();
+        Log.v("Scott", "Url is " + requestUrl);
         Map<String, Object> requestParamsMap = requestParams;
         PrintWriter printWriter = null;
         BufferedReader bufferedReader = null;
@@ -102,6 +103,7 @@ public class Connection {
                 e.printStackTrace();
             }
         }
+        Log.v("Scott", responseResult.toString());
         return responseResult.toString();
     }
 
@@ -110,6 +112,7 @@ public class Connection {
     public String upLoadFile(String action, String className, File file) {
         StringBuffer url = new StringBuffer("http://" + MainActivity.mainActivity.addrPreferences.getString("IP", null) + "/NetCar/");
         String requestUrl = url.append(className).toString();   //指定URL
+        Log.v("Scott", "Url is " + requestUrl);
         File targetFile = file;
         //File targetFile = new File(Environment.getExternalStorageDirectory().toString() + File.separator + "Sapcampus" + File.separator + "data.xml");
         StringBuffer responseResult = new StringBuffer();

@@ -99,7 +99,7 @@ public class CarDetailActivity extends AppCompatActivity {
         carDetailDoorNum.setText(Integer.toString(userCar.getCar().getDoorNum()) + "门");
         carDetailSeatNum.setText(Integer.toString(userCar.getCar().getSeatNum()) + "座");
         carDetailLicense.setText(userCar.getLicensePlateNumber());
-        carDetailVin.setText(Integer.toString(userCar.getVin()));
+        carDetailVin.setText(userCar.getVin());
         carDetailEngineNum.setText(userCar.getEngineNum());
         carDetailMileAge.setText(Integer.toString(userCar.getMileage()) + "公里");
         carDetailLastMaintainMile.setText((Integer.toString(userCar.getLastMaintainMile())) + "公里");

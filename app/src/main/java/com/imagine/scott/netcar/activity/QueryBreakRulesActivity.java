@@ -63,7 +63,7 @@ public class QueryBreakRulesActivity extends AppCompatActivity {
         if (userCar != null) {
             queryBreakRulesSelectProvince.setText(Character.toString(userCar.getLicensePlateNumber().charAt(0)));
             queryBreakRulesLicense.setText(userCar.getLicensePlateNumber().substring(1, 7));
-            queryBreakRulesVin.setText(Integer.toString(userCar.getVin()));
+            queryBreakRulesVin.setText(userCar.getVin());
             queryBreakRulesEngineNum.setText(userCar.getEngineNum());
         }
     }
@@ -304,7 +304,7 @@ public class QueryBreakRulesActivity extends AppCompatActivity {
 
     }
 
-    // 设置/取消最大长度限制
+    //设置/取消最大长度限制
     private void setMaxlength(EditText et, int maxLength) {
         if (maxLength > 0) {
             et.setFilters(new InputFilter[] { new InputFilter.LengthFilter(

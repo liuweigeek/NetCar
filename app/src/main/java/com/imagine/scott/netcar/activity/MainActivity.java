@@ -99,7 +99,6 @@ public class MainActivity extends AppCompatActivity
         mainActivity = this;
 
         exitToast = Toast.makeText(this, "再次按下返回键退出", Toast.LENGTH_LONG);
-
         Intent weizhangIntent = new Intent(this, WeizhangIntentService.class);
         weizhangIntent.putExtra("appId", 1849);
         weizhangIntent.putExtra("appKey", "af2248fc3cb4bd76b12335578144b197");
@@ -160,6 +159,7 @@ public class MainActivity extends AppCompatActivity
 
     public void showExitToast() {
         new Thread() {
+            @Override
             public void run() {
                 exitToast.show();
                 isExitToastShow = true;
@@ -296,6 +296,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.action_register:
                 Intent registerIntent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(registerIntent);
+                break;
+            default:
                 break;
         }
         return super.onOptionsItemSelected(item);

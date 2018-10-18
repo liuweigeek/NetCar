@@ -164,6 +164,7 @@ public class MusicFragment extends BaseFragment implements MediaPlayer.OnErrorLi
                             isAutoPause = false;
                         }
                         break;
+                    default:
                 }
             }
         }

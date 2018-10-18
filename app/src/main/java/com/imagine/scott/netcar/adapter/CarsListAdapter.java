@@ -55,6 +55,7 @@ public class CarsListAdapter extends RecyclerView.Adapter<CarsListAdapter.ViewHo
         return vh;
     }
 
+    @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
         ImageView itemUsercarLogo = (ImageView)holder.listItem.findViewById(R.id.item_usercar_logo);

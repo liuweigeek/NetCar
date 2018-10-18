@@ -99,7 +99,7 @@ public class ResultJSONOperate {
             userCar.setId(itemData.optInt("id"));
             userCar.setLicensePlateNumber(itemData.optString("license"));
             userCar.setEngineNum(itemData.optString("enginenum"));
-            userCar.setVin(itemData.optInt("vin"));
+            userCar.setVin(itemData.optString("vin"));
             userCar.setMileage(itemData.optInt("mileage"));
             userCar.setLastMaintainMile(itemData.optInt("lastmaintainmile"));
             userCar.setLampWell(itemData.optBoolean("lampwell"));

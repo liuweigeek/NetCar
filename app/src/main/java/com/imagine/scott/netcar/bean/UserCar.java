@@ -11,7 +11,7 @@ public class UserCar implements Serializable {
 	private Car car;	//车型
 	private String licensePlateNumber;  //汽车车牌号
 	private String engineNum;  //汽车发动机号
-	private Integer vin;  //汽车车架号
+	private String vin;  //汽车车架号
 	private Integer mileage; //汽车里程数
 	private Integer lastMaintainMile;
 	private Integer avgEcon;    //平均油耗
@@ -54,10 +54,10 @@ public class UserCar implements Serializable {
 	public void setEngineNum(String engineNum) {
 		this.engineNum = engineNum;
 	}
-	public Integer getVin() {
+	public String getVin() {
 		return vin;
 	}
-	public void setVin(Integer vin) {
+	public void setVin(String vin) {
 		this.vin = vin;
 	}
 	public Integer getMileage() {

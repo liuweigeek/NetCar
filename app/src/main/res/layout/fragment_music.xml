@@ -65,7 +65,7 @@
 
                 <ImageButton
                     android:id="@+id/music_rewind"
-                    android:background="@color/colorWhite"
+                    android:background="@android:color/transparent"
                     android:src="@drawable/ic_music_previous"
                     android:layout_marginLeft="6dp"
                     android:layout_marginRight="6dp"
@@ -78,7 +78,7 @@
                     android:layout_height="48dp" />
                 <ImageButton
                     android:id="@+id/music_play"
-                    android:background="@color/colorWhite"
+                    android:background="@android:color/transparent"
                     android:src="@drawable/ic_music_play"
                     android:layout_marginLeft="6dp"
                     android:layout_marginRight="6dp"
@@ -91,7 +91,7 @@
                     android:layout_height="48dp" />
                 <ImageButton
                     android:id="@+id/music_foward"
-                    android:background="@color/colorWhite"
+                    android:background="@android:color/transparent"
                     android:src="@drawable/ic_music_next"
                     android:layout_marginLeft="6dp"
                     android:layout_marginRight="6dp"
