@@ -1,13 +1,3 @@
-*.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
-
-
 #built application files
 *.apk
 *.ap_
@@ -40,8 +30,6 @@ Thumbs.db
 # Android Studio
 *.iml
 .idea
-
-# Local IDEA workspace
 
 # Gradle cache
 .gradle
