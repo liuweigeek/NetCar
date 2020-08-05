@@ -13,6 +13,8 @@ bin/
 gen/
 out/
 build/
+debug/
+release/
 
 # Local configuration file (sdk path, etc)
 local.properties
