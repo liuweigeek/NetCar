@@ -2,11 +2,10 @@ package com.imagine.scott.netcar.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.amap.api.services.core.LatLonPoint;
@@ -57,6 +56,7 @@ public class SearchedListActivity extends AppCompatActivity implements PoiSearch
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
             }
+
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 int lastVisibleItem = ((LinearLayoutManager) mLayoutManager).findLastVisibleItemPosition();
@@ -79,18 +79,20 @@ public class SearchedListActivity extends AppCompatActivity implements PoiSearch
         this.setResult(1, intent);
         this.finish();
     }
+
     private void doSearchQuery() {
         showProgressDialog();// 显示进度框
         query = new PoiSearch.Query(keyWord, "", MapFragment.amapLocation.getCityCode());// 第一个参数表示搜索字符串，第二个参数表示poi搜索类型，第三个参数表示poi搜索区域（空字符串代表全国）
         query.setPageSize(15);// 设置每页最多返回多少条poiitem
         query.setPageNum(currentPage);// 设置查找页数
 
-        PoiSearch poiSearch = new PoiSearch(this,query);
+        PoiSearch poiSearch = new PoiSearch(this, query);
         poiSearch.setBound(new PoiSearch.SearchBound(new LatLonPoint(MapFragment.amapLocation.getLatitude(),
                 MapFragment.amapLocation.getLongitude()), 100000));//设置周边搜索的中心点以及区域
         poiSearch.setOnPoiSearchListener(this);//设置数据返回的监听器
         poiSearch.searchPOIAsyn();  //开始搜索
     }
+
     //region 高德搜索完成
     @Override
     public void onPoiSearched(PoiResult result, int rcode) {
@@ -99,7 +101,7 @@ public class SearchedListActivity extends AppCompatActivity implements PoiSearch
             if (result != null && result.getQuery() != null) {// 搜索poi的结果
                 if (result.getQuery().equals(query)) {// 是否是同一条
                     poiResult = result;
-                    if (poiResult.getPois().size() <=0) {
+                    if (poiResult.getPois().size() <= 0) {
                         Toast.makeText(this, "没有搜索到更多相关数据！", Toast.LENGTH_LONG).show();
                         return;
                     }

@@ -33,6 +33,7 @@ public class MusicsListAdapter extends RecyclerView.Adapter<MusicsListAdapter.Vi
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public View listItem;
+
         public ViewHolder(View v) {
             super(v);
             listItem = v;
@@ -44,7 +45,7 @@ public class MusicsListAdapter extends RecyclerView.Adapter<MusicsListAdapter.Vi
 
         View listItem = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_music, parent, false);
-  //      listItem.setBackgroundResource(mBackground);
+        //      listItem.setBackgroundResource(mBackground);
         ViewHolder vh = new ViewHolder(listItem);
         return vh;
     }

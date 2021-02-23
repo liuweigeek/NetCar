@@ -69,7 +69,7 @@ public class QueryBreakRulesActivity extends AppCompatActivity {
     }
 
     private String[] getData() {
-        return new String[] {"京", "津", "沪", "川", "鄂", "甘", "赣", "桂", "贵", "黑",
+        return new String[]{"京", "津", "沪", "川", "鄂", "甘", "赣", "桂", "贵", "黑",
                 "吉", "翼", "晋", "辽", "鲁", "蒙", "闽", "宁", "青", "琼", "陕", "苏",
                 "皖", "湘", "新", "渝", "豫", "粤", "云", "藏", "浙"};
     }
@@ -89,7 +89,7 @@ public class QueryBreakRulesActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
                         String shortName = shortProvinceAdapter.getItem(position);
-                        if(shortName.length() > 0){
+                        if (shortName.length() > 0) {
                             queryBreakRulesSelectProvince.setText(shortName);
                             dialog.dismiss();
                         }
@@ -198,7 +198,7 @@ public class QueryBreakRulesActivity extends AppCompatActivity {
             int len_engine = cityConfig.getEngineno();
 
             String str = Integer.toString(len_vin) + " " + Integer.toString(len_engine);
-            Log.v("Scott vin and engine is",  str);
+            Log.v("Scott vin and engine is", str);
 
             View row_vin = findViewById(R.id.query_break_rules_vin_row);
             View row_engine = findViewById(R.id.query_break_rules_enginenum_row);
@@ -307,10 +307,10 @@ public class QueryBreakRulesActivity extends AppCompatActivity {
     //设置/取消最大长度限制
     private void setMaxlength(EditText et, int maxLength) {
         if (maxLength > 0) {
-            et.setFilters(new InputFilter[] { new InputFilter.LengthFilter(
-                    maxLength) });
+            et.setFilters(new InputFilter[]{new InputFilter.LengthFilter(
+                    maxLength)});
         } else { //不限制
-            et.setFilters(new InputFilter[] {});
+            et.setFilters(new InputFilter[]{});
         }
     }
 

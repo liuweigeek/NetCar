@@ -35,6 +35,7 @@ public class GasStationListAdapter extends RecyclerView.Adapter<GasStationListAd
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public View listItem;
+
         public ViewHolder(View v) {
             super(v);
             listItem = v;
@@ -46,16 +47,16 @@ public class GasStationListAdapter extends RecyclerView.Adapter<GasStationListAd
 
         View listItem = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_usercar, parent, false);
-  //      listItem.setBackgroundResource(mBackground);
+        //      listItem.setBackgroundResource(mBackground);
         ViewHolder vh = new ViewHolder(listItem);
         return vh;
     }
 
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
-        ImageView itemUsercarLogo = (ImageView)holder.listItem.findViewById(R.id.item_usercar_logo);
-        TextView itemUsercarLicense = (TextView)holder.listItem.findViewById(R.id.item_usercar_license);
-        TextView itemUsercarInfo = (TextView)holder.listItem.findViewById(R.id.item_usercar_info);
+        ImageView itemUsercarLogo = (ImageView) holder.listItem.findViewById(R.id.item_usercar_logo);
+        TextView itemUsercarLicense = (TextView) holder.listItem.findViewById(R.id.item_usercar_license);
+        TextView itemUsercarInfo = (TextView) holder.listItem.findViewById(R.id.item_usercar_info);
         itemUsercarLicense.setText(userCars.get(position).getLicensePlateNumber());
 
         UserCar userCar = userCars.get(position);

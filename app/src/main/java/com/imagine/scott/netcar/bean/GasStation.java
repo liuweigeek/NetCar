@@ -38,6 +38,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -45,6 +46,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -52,6 +54,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public int getArea() {
         return area;
     }
+
     public void setArea(int area) {
         this.area = area;
     }
@@ -59,6 +62,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public String getAreaname() {
         return areaname;
     }
+
     public void setAreaname(String areaname) {
         this.areaname = areaname;
     }
@@ -66,6 +70,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public String getAddress() {
         return address;
     }
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -73,6 +78,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public String getBrandname() {
         return brandname;
     }
+
     public void setBrandname(String brandname) {
         this.brandname = brandname;
     }
@@ -80,6 +86,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public String getType() {
         return type;
     }
+
     public void setType(String type) {
         this.type = type;
     }
@@ -87,6 +94,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public String getDiscount() {
         return discount;
     }
+
     public void setDiscount(String discount) {
         this.discount = discount;
     }
@@ -94,6 +102,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public String getExhaust() {
         return exhaust;
     }
+
     public void setExhaust(String exhaust) {
         this.exhaust = exhaust;
     }
@@ -101,6 +110,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public String getPosition() {
         return position;
     }
+
     public void setPosition(String position) {
         this.position = position;
     }
@@ -108,6 +118,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public double getLon() {
         return lon;
     }
+
     public void setLon(double lon) {
         this.lon = lon;
     }
@@ -115,6 +126,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public double getLat() {
         return lat;
     }
+
     public void setLat(double lat) {
         this.lat = lat;
     }
@@ -122,13 +134,15 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public float getGasPrice_90() {
         return gasPrice_90;
     }
+
     public void setGasPrice_90(float gasPrice_90) {
         this.gasPrice_90 = gasPrice_90;
     }
-    
+
     public float getGasPrice_93() {
         return gasPrice_93;
     }
+
     public void setGasPrice_93(float gasPrice_93) {
         this.gasPrice_93 = gasPrice_93;
     }
@@ -136,6 +150,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public float getGasPrice_97() {
         return gasPrice_97;
     }
+
     public void setGasPrice_97(float gasPrice_97) {
         this.gasPrice_97 = gasPrice_97;
     }
@@ -143,6 +158,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public float getGasPrice_0() {
         return gasPrice_0;
     }
+
     public void setGasPrice_0(float gasPrice_0) {
         this.gasPrice_0 = gasPrice_0;
     }
@@ -150,6 +166,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public String getFwlsmc() {
         return fwlsmc;
     }
+
     public void setFwlsmc(String fwlsmc) {
         this.fwlsmc = fwlsmc;
     }
@@ -157,6 +174,7 @@ public class GasStation implements Serializable, Comparable<GasStation> {
     public int getDistance() {
         return distance;
     }
+
     public void setDistance(int distance) {
         this.distance = distance;
     }

@@ -150,21 +150,24 @@ public class MapFragment extends BaseFragment implements LocationSource,
         mMapView.onResume();
         setUpMap();
     }
+
     @Override
     public void onPause() {
         super.onPause();
         deactivate();
         mMapView.onPause();
     }
+
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         mMapView.onSaveInstanceState(outState);
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if(null != mlocationClient){
+        if (null != mlocationClient) {
             mlocationClient.stopLocation();
             mlocationClient.onDestroy();
         }
@@ -235,8 +238,8 @@ public class MapFragment extends BaseFragment implements LocationSource,
                     convertToBaidu(amapLocation.getLongitude(), amapLocation.getLatitude());
                 }
             } else {
-                String errText = "定位失败," + amapLocation.getErrorCode()+ ": " + amapLocation.getErrorInfo();
-                Log.e("AmapErr",errText);
+                String errText = "定位失败," + amapLocation.getErrorCode() + ": " + amapLocation.getErrorInfo();
+                Log.e("AmapErr", errText);
             }
         }
     }
@@ -347,6 +350,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
                 public boolean onQueryTextChange(String newText) {
                     return true;
                 }
+
                 @Override
                 public boolean onQueryTextSubmit(String query) {
                     if (!TextUtils.isEmpty(query)) {
@@ -467,7 +471,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
         if (detailMarker != null) detailMarker = null;
         if (gasStations != null) gasStations.clear();
         if (poiItems != null) poiItems.clear();
-        if (myPoiOverlay !=null) myPoiOverlay.removeFromMap();
+        if (myPoiOverlay != null) myPoiOverlay.removeFromMap();
         if (markers != null) markers.clear();
         gasStationCardView.setVisibility(View.INVISIBLE);
         searchedCardView.setVisibility(View.INVISIBLE);
@@ -481,10 +485,12 @@ public class MapFragment extends BaseFragment implements LocationSource,
         searchedCardView.setVisibility(View.INVISIBLE);
         gasStationCardView.setVisibility(View.VISIBLE);
     }
+
     public void showSearchedCardView() {
         gasStationCardView.setVisibility(View.INVISIBLE);
         searchedCardView.setVisibility(View.VISIBLE);
     }
+
     public void hideAllCardView() {
         gasStationCardView.setVisibility(View.INVISIBLE);
         searchedCardView.setVisibility(View.INVISIBLE);
@@ -517,7 +523,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
             }
             return true;
         }
-        if (isGasStationSearched){
+        if (isGasStationSearched) {
             try {
                 if (mlastMarker == null) {
                     mlastMarker = marker;
@@ -629,7 +635,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
                 Intent intent = new Intent(getActivity(), AppoActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("gasStation", gasStation);
-                intent .putExtras(bundle);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -648,7 +654,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
         bundle.putSerializable("gasStation", gasStation);
         bundle.putDouble("mLat", amapLocation.getLatitude());
         bundle.putDouble("mLng", amapLocation.getLongitude());
-        intent .putExtras(bundle);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 
@@ -704,7 +710,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
                             .fromBitmap(BitmapFactory.decodeResource(
                                     getResources(),
                                     markerDraws[index])));
-                }else {
+                } else {
                     mlastMarker.setIcon(BitmapDescriptorFactory.fromBitmap(
                             BitmapFactory.decodeResource(getResources(), R.drawable.marker_unclick)));
                 }
@@ -725,14 +731,16 @@ public class MapFragment extends BaseFragment implements LocationSource,
         private List<PoiItem> mPois;
 
         //构造方法
-        public MyPoiOverlay(AMap amap ,List<PoiItem> pois) {
+        public MyPoiOverlay(AMap amap, List<PoiItem> pois) {
             mAmap = amap;
             mPois = pois;
         }
+
         //构造方法
         public MyPoiOverlay(AMap aMap) {
             this.mAmap = aMap;
         }
+
         //将搜索到的加油站添加显示到Map
         public void mAddToMap() {
             for (int i = 0; i < gasStations.size(); i++) {
@@ -749,6 +757,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
                 markers.add(marker);
             }
         }
+
         //将内置搜索到的Poi添加显示到Map
         public void addToMap() {
             for (int i = 0; i < mPois.size(); i++) {
@@ -758,6 +767,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
                 markers.add(marker);
             }
         }
+
         //将内置搜索到的Poi添加显示到Map
         public void searchedAddToMap() {
             for (int i = 0; i < mPois.size(); i++) {
@@ -773,6 +783,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
                 markers.add(marker);
             }
         }
+
         //从地图中移除Marker
         public void removeFromMap() {
             for (Marker mark : markers) {
@@ -782,6 +793,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
 
         /**
          * 移动镜头到当前的视角。
+         *
          * @since V2.1.0
          */
         public void zoomToSpan() {
@@ -846,7 +858,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
                 BitmapDescriptor icon = BitmapDescriptorFactory.fromBitmap(
                         BitmapFactory.decodeResource(getResources(), markerDraws[arg0]));
                 return icon;
-            }else {
+            } else {
                 BitmapDescriptor icon = BitmapDescriptorFactory.fromBitmap(
                         BitmapFactory.decodeResource(getResources(), R.drawable.marker_other_highlight));
                 return icon;
@@ -869,7 +881,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
     //endregion
 
     //region 隐藏进度框
-    private void dissmissProgressDialog() {
+    private void dismissProgressDialog() {
         if (progDialog != null) {
             progDialog.dismiss();
         }
@@ -877,20 +889,21 @@ public class MapFragment extends BaseFragment implements LocationSource,
     //endregion
 
     //region 定位权限
-    public boolean checkPermission(){
+    public boolean checkPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             int checkGPSPhonePermission = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION);
-            if(checkGPSPhonePermission != PackageManager.PERMISSION_GRANTED){
+            if (checkGPSPhonePermission != PackageManager.PERMISSION_GRANTED) {
                 //若没有则弹出对话框请求
                 ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, Constants.REQUEST_CODE_ASK_ACCESS_FINE_LOCATION);
                 return false;
-            }else{
+            } else {
                 return true;
             }
         } else {
             return true;
         }
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {

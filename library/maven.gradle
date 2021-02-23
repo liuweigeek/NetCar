@@ -5,7 +5,7 @@ version = android.defaultConfig.versionName
 
 publishing {
     publications {
-        maven(MavenPublication){
+        maven(MavenPublication) {
             groupId project.group
             artifactId rootProject.name
             version project.version

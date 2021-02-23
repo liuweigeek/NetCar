@@ -63,7 +63,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:contentDescription="gaslogo"/>
+                android:contentDescription="gaslogo" />
         </RelativeLayout>
 
         <TextView
@@ -132,8 +132,9 @@
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
                     android:layout_height="wrap_content"
-                    android:layout_width="match_parent"/>
+                    android:layout_width="match_parent" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/card_gas_station_detail"
                 android:layout_height="wrap_content"
@@ -155,7 +156,7 @@
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
                     android:layout_height="wrap_content"
-                    android:layout_width="match_parent"/>
+                    android:layout_width="match_parent" />
             </LinearLayout>
         </android.support.v7.widget.GridLayout>
     </LinearLayout>

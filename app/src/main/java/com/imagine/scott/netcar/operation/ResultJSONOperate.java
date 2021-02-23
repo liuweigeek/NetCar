@@ -14,9 +14,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,6 +28,7 @@ public class ResultJSONOperate {
         JSONObject jsonObject = new JSONObject(jsonStr);
         return jsonObject.optString("rescode");
     }
+
     public static int getLoginCode(String jsonStr) throws Exception {
         JSONObject jsonObject = new JSONObject(jsonStr);
         int resCode = jsonObject.optInt("rescode");
@@ -63,6 +64,7 @@ public class ResultJSONOperate {
         }
         return itemVehicleBrands;
     }
+
     public static List<Car> getCarModelsJson(String jsonStr) throws JSONException {
         JSONObject jsonObject = new JSONObject(jsonStr);
         JSONArray jsonArray = jsonObject.getJSONArray("cars");
@@ -127,6 +129,7 @@ public class ResultJSONOperate {
         }
         return itemProvinces;
     }
+
     public static List<Region> getCitysJson(String jsonStr) throws JSONException {
         JSONObject jsonObject = new JSONObject(jsonStr);
         JSONArray jsonArray = jsonObject.getJSONArray("citys");
@@ -141,6 +144,7 @@ public class ResultJSONOperate {
         }
         return itemCitys;
     }
+
     public static List<Order> getOrdersJson(String jsonStr) throws JSONException {
         JSONObject jsonObject = new JSONObject(jsonStr);
         JSONArray jsonArray = jsonObject.getJSONArray("orders");
@@ -163,6 +167,7 @@ public class ResultJSONOperate {
         }
         return orders;
     }
+
     public static Order getOrderJson(String jsonStr) throws JSONException {
         JSONObject jsonObject = new JSONObject(jsonStr);
         if (Constants.ADD_ORDER_SUCCESS == jsonObject.optInt("rescode")) {
@@ -184,6 +189,7 @@ public class ResultJSONOperate {
             return null;
         }
     }
+
     public static List<Notification> getNotificationsJson(String jsonStr) throws JSONException {
         JSONObject jsonObject = new JSONObject(jsonStr);
         JSONArray jsonArray = jsonObject.getJSONArray("notifications");

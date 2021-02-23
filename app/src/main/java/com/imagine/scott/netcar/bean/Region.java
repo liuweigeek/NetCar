@@ -1,34 +1,34 @@
 package com.imagine.scott.netcar.bean;
 
 public class Region {
-	private Integer id;
+    private Integer id;
 
-	private String regionName;
-	
-	private Integer parentId;
+    private String regionName;
 
-	public Integer getId() {
-		return id;
-	}
+    private Integer parentId;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getRegionName() {
-		return regionName;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setRegionName(String regionName) {
-		this.regionName = regionName;
-	}
+    public String getRegionName() {
+        return regionName;
+    }
 
-	public Integer getParentId() {
-		return parentId;
-	}
+    public void setRegionName(String regionName) {
+        this.regionName = regionName;
+    }
 
-	public void setParentId(Integer parentId) {
-		this.parentId = parentId;
-	}
+    public Integer getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
+    }
 
 }

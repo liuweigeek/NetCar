@@ -7,20 +7,19 @@
     <com.amap.api.maps.MapView
         android:id="@+id/map_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    </com.amap.api.maps.MapView>
+        android:layout_height="match_parent"></com.amap.api.maps.MapView>
 
     <include
         layout="@layout/cardview_gas_station"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <include
         layout="@layout/cardview_searched"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/map_fab"

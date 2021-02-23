@@ -6,11 +6,10 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,6 +41,7 @@ public class RegisterNextActivity extends AppCompatActivity {
     private View mProgressView;
     private View mRegisterNextFormView;
     private Button signUpButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,7 +85,7 @@ public class RegisterNextActivity extends AppCompatActivity {
     }
 
     public class ReSendThread extends Thread {
-        public void run(){
+        public void run() {
             try {
                 while (reSendTime >= 0) {
                     handler.post(runnableUi);
@@ -101,7 +101,7 @@ public class RegisterNextActivity extends AppCompatActivity {
         }
     }
 
-    Runnable runnableUi = new Runnable(){
+    Runnable runnableUi = new Runnable() {
         @Override
         public void run() {
             if (reSendTime > 0) {
@@ -145,7 +145,7 @@ public class RegisterNextActivity extends AppCompatActivity {
             mPasswordView.setError("不可为空");
             focusView = mPasswordView;
             cancel = true;
-        }else if (!isPasswordValid(password)) {
+        } else if (!isPasswordValid(password)) {
             mPasswordView.setError("密码至少为8位");
             focusView = mPasswordView;
             cancel = true;
@@ -165,7 +165,7 @@ public class RegisterNextActivity extends AppCompatActivity {
     }
 
     private boolean isPasswordValid(String phone) {
-        return  phone.length() >= 8;
+        return phone.length() >= 8;
     }
 
     public class UserRegisterNextTask extends AsyncTask<String, Void, String> {

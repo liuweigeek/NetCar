@@ -50,7 +50,7 @@ public class NotificationFragment extends BaseFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.mainActivity = MainActivity.mainActivity;
-        notifications= new ArrayList<>();
+        notifications = new ArrayList<>();
     }
 
     @Override
@@ -206,7 +206,7 @@ public class NotificationFragment extends BaseFragment {
                             mAuthTask.execute(mainActivity.userInfoPreferences.getString("userphone", ""));
                         }
                         break;
-                    case Constants.DELETE_ORDER_FAILED :
+                    case Constants.DELETE_ORDER_FAILED:
                         Toast.makeText(getActivity(), "删除通知失败", Toast.LENGTH_LONG).show();
                         break;
                 }

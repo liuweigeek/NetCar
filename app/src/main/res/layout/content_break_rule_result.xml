@@ -8,22 +8,22 @@
     tools:showIn="@layout/activity_break_rule_result">
 
     <!-- 结果列表 -->
-	<android.support.v7.widget.RecyclerView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/break_rule_result_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5.0dp"
         android:divider="@null" />
-    
+
     <!-- 没有违章记录 -->
-	<TextView
+    <TextView
         android:id="@+id/break_rule_result_null"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80.0dp"
         android:gravity="center"
         android:text="恭喜, 没有查到违章记录！"
-        android:visibility="gone" />   
+        android:visibility="gone" />
 
     <!-- 查询中 -->
     <FrameLayout
@@ -39,12 +39,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="35.0dp"
             android:layout_gravity="center" />
+
         <TextView
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="center"
-	        android:gravity="center"
-	        android:text="正在查询, 请稍候 ..."/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="正在查询, 请稍候 ..." />
 
     </FrameLayout>
 </LinearLayout>

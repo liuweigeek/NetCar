@@ -1,7 +1,6 @@
 package com.imagine.scott.netcar.fragment;
 
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -13,23 +12,19 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.PowerManager;
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.telephony.TelephonyManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.RemoteViews;
 import android.widget.TextView;
 
 import com.imagine.scott.netcar.R;
 import com.imagine.scott.netcar.activity.MainActivity;
 import com.imagine.scott.netcar.adapter.MusicsListAdapter;
 import com.imagine.scott.netcar.bean.Music;
-
 import com.imagine.scott.netcar.operation.GetMusicList;
 
 import java.io.IOException;
@@ -96,7 +91,7 @@ public class MusicFragment extends BaseFragment implements MediaPlayer.OnErrorLi
         musicFoward.setOnClickListener(new MyListener());
 
         musicListView = (RecyclerView) rootview.findViewById(R.id.music_recycler_view);
-        musicListView.setHasFixedSize(true );
+        musicListView.setHasFixedSize(true);
         musicLayoutManager = new LinearLayoutManager(getActivity());
         musicListView.setLayoutManager(musicLayoutManager);
         musicListAdapter = new MusicsListAdapter(MusicFragment.this, musics);
@@ -136,15 +131,15 @@ public class MusicFragment extends BaseFragment implements MediaPlayer.OnErrorLi
         @Override
         public void onReceive(Context context, Intent intent) {
             //如果是拨打电话
-            if(intent.getAction().equals(Intent.ACTION_NEW_OUTGOING_CALL)){
+            if (intent.getAction().equals(Intent.ACTION_NEW_OUTGOING_CALL)) {
                 player.pause();
                 musicPlay.setImageResource(R.drawable.ic_music_play);
                 isAutoPause = true;
                 String phoneNumber = intent.getStringExtra(Intent.EXTRA_PHONE_NUMBER);
-            }else{
+            } else {
                 //如果是来电
                 TelephonyManager tm =
-                        (TelephonyManager)context.getSystemService(Service.TELEPHONY_SERVICE);
+                        (TelephonyManager) context.getSystemService(Service.TELEPHONY_SERVICE);
 
                 switch (tm.getCallState()) {
                     case TelephonyManager.CALL_STATE_RINGING:
@@ -178,7 +173,7 @@ public class MusicFragment extends BaseFragment implements MediaPlayer.OnErrorLi
             String action = intent.getAction();
             if (action.equals(NOTIFICATION_ITEM_BUTTON_LAST)) {
                 rewind();
-            } else  if (action.equals(NOTIFICATION_ITEM_BUTTON_PLAY)) {
+            } else if (action.equals(NOTIFICATION_ITEM_BUTTON_PLAY)) {
                 if (player.isPlaying()) {
                     isAutoPause = false;
                     player.pause();

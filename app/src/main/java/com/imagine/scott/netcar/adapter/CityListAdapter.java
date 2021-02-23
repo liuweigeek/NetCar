@@ -31,6 +31,7 @@ public class CityListAdapter extends RecyclerView.Adapter<CityListAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public View listItem;
+
         public ViewHolder(View v) {
             super(v);
             listItem = v;
@@ -53,7 +54,7 @@ public class CityListAdapter extends RecyclerView.Adapter<CityListAdapter.ViewHo
         } else {
             holder.listItem.setBackgroundColor(MainActivity.mainActivity.getResources().getColor(R.color.colorWhite));
         }
-        TextView itemCityName = (TextView)holder.listItem.findViewById(R.id.item_city_name);
+        TextView itemCityName = (TextView) holder.listItem.findViewById(R.id.item_city_name);
         itemCityName.setText(cityData.get(position).getRegionName());
         holder.listItem.setOnClickListener(new View.OnClickListener() {
             @Override

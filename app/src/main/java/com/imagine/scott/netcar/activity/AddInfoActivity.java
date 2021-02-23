@@ -9,10 +9,10 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -122,7 +122,7 @@ public class AddInfoActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
                         String shortName = shortProvinceAdapter.getItem(position);
-                        if(shortName.length()>0){
+                        if (shortName.length() > 0) {
                             mSetUserCarInfoShortProvince.setText(shortName);
                             dialog.dismiss();
                         }
@@ -155,7 +155,7 @@ public class AddInfoActivity extends AppCompatActivity {
     }
 
     private String[] getData() {
-        return new String[] {"京", "津", "沪", "川", "鄂", "甘", "赣", "桂", "贵", "黑",
+        return new String[]{"京", "津", "沪", "川", "鄂", "甘", "赣", "桂", "贵", "黑",
                 "吉", "翼", "晋", "辽", "鲁", "蒙", "闽", "宁", "青", "琼", "陕", "苏",
                 "皖", "湘", "新", "渝", "豫", "粤", "云", "藏", "浙"};
     }

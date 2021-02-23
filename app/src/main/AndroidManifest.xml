@@ -45,7 +45,7 @@
         <meta-data
             android:name="com.thinkland.juheapi.openid"
             android:value="JHa562e1056fe5b4d4d31f990dfed5e855" />
-            <!--JH83f96e78b5ffcb6696d0d0b0bb3eac47-->
+        <!--JH83f96e78b5ffcb6696d0d0b0bb3eac47-->
         <meta-data
             android:name="PUSH_APPID"
             android:value="ElCnUzo5DKAm5LER66d4T6" />
@@ -207,19 +207,19 @@
             android:label=""
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:uiOptions="splitActionBarWhenNarrow"/>
+            android:uiOptions="splitActionBarWhenNarrow" />
         <activity
             android:name=".activity.UserInfoActivity"
             android:label=""
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:uiOptions="splitActionBarWhenNarrow"/>
+            android:uiOptions="splitActionBarWhenNarrow" />
         <activity
             android:name=".activity.AddNewCarActivity"
             android:label="@string/title_activity_add_new_car"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:uiOptions="splitActionBarWhenNarrow"/>
+            android:uiOptions="splitActionBarWhenNarrow" />
         <activity
             android:name=".activity.AppoActivity"
             android:label="@string/title_activity_appo"
@@ -229,7 +229,7 @@
             android:name=".activity.AppoDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:uiOptions="splitActionBarWhenNarrow"/>
+            android:uiOptions="splitActionBarWhenNarrow" />
         <activity
             android:name=".activity.QueryBreakRulesActivity"
             android:screenOrientation="portrait"

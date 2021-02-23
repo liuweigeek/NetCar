@@ -104,7 +104,7 @@
                             android:paddingBottom="@dimen/activity_vertical_margin"
                             android:paddingTop="@dimen/activity_vertical_margin"
                             android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"/>
+                            android:layout_width="wrap_content" />
 
                         <EditText
                             android:id="@+id/add_new_car_license"
@@ -122,7 +122,7 @@
                             android:paddingTop="@dimen/activity_vertical_margin"
                             android:singleLine="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content" />
 
                         <Button
                             android:id="@+id/add_new_car_select_province"
@@ -158,7 +158,7 @@
                             android:paddingRight="@dimen/activity_horizontal_margin"
                             android:paddingTop="@dimen/activity_vertical_margin"
                             android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"/>
+                            android:layout_width="wrap_content" />
 
                         <EditText
                             android:id="@+id/add_new_car_vin"
@@ -176,8 +176,9 @@
                             android:paddingTop="@dimen/activity_vertical_margin"
                             android:singleLine="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content" />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:background="@color/colorWhite"
                         android:layout_width="match_parent"
@@ -198,7 +199,7 @@
                             android:paddingRight="@dimen/activity_horizontal_margin"
                             android:paddingTop="@dimen/activity_vertical_margin"
                             android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"/>
+                            android:layout_width="wrap_content" />
 
                         <EditText
                             android:id="@+id/add_new_car_enginenum"
@@ -216,7 +217,7 @@
                             android:paddingTop="@dimen/activity_vertical_margin"
                             android:singleLine="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content" />
                     </RelativeLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>

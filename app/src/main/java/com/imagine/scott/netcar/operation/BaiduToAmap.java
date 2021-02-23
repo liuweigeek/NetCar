@@ -10,7 +10,7 @@ import com.imagine.scott.netcar.activity.MainActivity;
 public class BaiduToAmap {
     public static LatLng convert(double lat, double lng) {
         LatLng sourceLatLng = new LatLng(lat, lng);
-        CoordinateConverter converter  = new CoordinateConverter(MainActivity.mainActivity);
+        CoordinateConverter converter = new CoordinateConverter(MainActivity.mainActivity);
         // CoordType.GPS 待转换坐标类型
         converter.from(CoordinateConverter.CoordType.BAIDU);
         // sourceLatLng待转换坐标点

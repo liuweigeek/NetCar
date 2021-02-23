@@ -2,11 +2,9 @@ package com.imagine.scott.netcar.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +13,6 @@ import android.widget.TextView;
 import com.imagine.scott.netcar.R;
 import com.imagine.scott.netcar.activity.GasStationDetailActivity;
 import com.imagine.scott.netcar.activity.MainActivity;
-import com.imagine.scott.netcar.adapter.CarsListAdapter;
 import com.imagine.scott.netcar.adapter.GasListAdapter;
 import com.imagine.scott.netcar.bean.GasStation;
 
@@ -82,9 +79,10 @@ public class GasStationFragment extends BaseFragment {
         bundle.putSerializable("gasStation", gasStations.get(position));
         bundle.putDouble("mLat", MapFragment.amapLocation.getLatitude());
         bundle.putDouble("mLng", MapFragment.amapLocation.getLongitude());
-        intent .putExtras(bundle);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 
-    public void onShowFragment() {}
+    public void onShowFragment() {
+    }
 }

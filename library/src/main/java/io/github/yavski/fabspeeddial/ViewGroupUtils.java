@@ -59,7 +59,7 @@ class ViewGroupUtils {
      * will be the bounding rect of the real transformed rect.
      *
      * @param descendant view defining the original coordinate system of rect
-     * @param rect (in/out) the rect to offset from descendant to this view's coordinate system
+     * @param rect       (in/out) the rect to offset from descendant to this view's coordinate system
      */
     static void offsetDescendantRect(ViewGroup parent, View descendant, Rect rect) {
         IMPL.offsetDescendantRect(parent, descendant, rect);
@@ -70,7 +70,7 @@ class ViewGroupUtils {
      * This does not need to be a direct child.
      *
      * @param descendant descendant view to reference
-     * @param out rect to set to the bounds of the descendant view
+     * @param out        rect to set to the bounds of the descendant view
      */
     static void getDescendantRect(ViewGroup parent, View descendant, Rect out) {
         out.set(0, 0, descendant.getWidth(), descendant.getHeight());

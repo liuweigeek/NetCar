@@ -2,7 +2,6 @@ package com.imagine.scott.netcar.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +34,7 @@ public class VehicleBrandListAdapter extends RecyclerView.Adapter<VehicleBrandLi
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public View listItem;
+
         public ViewHolder(View v) {
             super(v);
             listItem = v;
@@ -59,7 +59,7 @@ public class VehicleBrandListAdapter extends RecyclerView.Adapter<VehicleBrandLi
             holder.listItem.setBackgroundColor(MainActivity.mainActivity.getResources().getColor(R.color.colorWhite));
         }
         ImageView itemVehicleBrandLogo = (ImageView) holder.listItem.findViewById(R.id.item_vehiclebrand_logo);
-        TextView itemVehicleBrandName = (TextView)holder.listItem.findViewById(R.id.item_vehiclebrand_name);
+        TextView itemVehicleBrandName = (TextView) holder.listItem.findViewById(R.id.item_vehiclebrand_name);
         holder.listItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

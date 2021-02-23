@@ -33,7 +33,7 @@
         <com.amap.api.maps.MapView
             android:id="@+id/route_mapview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
         <LinearLayout
             android:background="#FFFFFF"
@@ -48,10 +48,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" />
+
             <include
                 layout="@layout/cardview_route"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </RelativeLayout>

@@ -31,6 +31,7 @@ public class NotificationListAdapter extends RecyclerView.Adapter<NotificationLi
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public View listItem;
+
         public ViewHolder(View v) {
             super(v);
             listItem = v;

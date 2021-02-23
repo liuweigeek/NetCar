@@ -1,8 +1,6 @@
 package com.imagine.scott.netcar.adapter;
 
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +31,7 @@ public class VehicleModelListAdapter extends RecyclerView.Adapter<VehicleModelLi
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public View listItem;
+
         public ViewHolder(View v) {
             super(v);
             listItem = v;
@@ -55,7 +54,7 @@ public class VehicleModelListAdapter extends RecyclerView.Adapter<VehicleModelLi
         } else {
             holder.listItem.setBackgroundColor(MainActivity.mainActivity.getResources().getColor(R.color.colorWhite));
         }
-        TextView itemVehicleModelName = (TextView)holder.listItem.findViewById(R.id.item_vehiclemodel_name);
+        TextView itemVehicleModelName = (TextView) holder.listItem.findViewById(R.id.item_vehiclemodel_name);
         itemVehicleModelName.setText(cars.get(position).getVehicleModel());
         holder.listItem.setOnClickListener(new View.OnClickListener() {
             @Override

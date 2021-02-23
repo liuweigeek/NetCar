@@ -91,7 +91,7 @@ public class AddNewCarActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
                         String shortName = shortProvinceAdapter.getItem(position);
-                        if(shortName.length()>0){
+                        if (shortName.length() > 0) {
                             mSetUserCarInfoShortProvinceView.setText(shortName);
                             dialog.dismiss();
                         }
@@ -103,7 +103,7 @@ public class AddNewCarActivity extends AppCompatActivity {
     }
 
     private String[] getData() {
-        return new String[] {"京", "津", "沪", "川", "鄂", "甘", "赣", "桂", "贵", "黑",
+        return new String[]{"京", "津", "沪", "川", "鄂", "甘", "赣", "桂", "贵", "黑",
                 "吉", "翼", "晋", "辽", "鲁", "蒙", "闽", "宁", "青", "琼", "陕", "苏",
                 "皖", "湘", "新", "渝", "豫", "粤", "云", "藏", "浙"};
     }

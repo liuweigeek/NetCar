@@ -127,13 +127,13 @@ public class Connection {
             conn = (HttpURLConnection) realUrl.openConnection();
             conn.setDoOutput(true);
             conn.setDoInput(true);
-            conn.setChunkedStreamingMode(1024*1024);
+            conn.setChunkedStreamingMode(1024 * 1024);
             conn.setRequestMethod("POST");
             conn.setRequestProperty("connection", "Keep-Alive");
             conn.setRequestProperty("Charsert", "UTF-8");
-            conn.setRequestProperty("Content-Type","multipart/form-data;file=" + targetFile.getName());
-            conn.setRequestProperty("filename",targetFile.getName());
-            conn.setRequestProperty("phone",action);
+            conn.setRequestProperty("Content-Type", "multipart/form-data;file=" + targetFile.getName());
+            conn.setRequestProperty("filename", targetFile.getName());
+            conn.setRequestProperty("phone", action);
             dataOutputStream = new DataOutputStream(conn.getOutputStream());
             dataInputStream = new DataInputStream(new FileInputStream(targetFile));
             int bytes = 0;

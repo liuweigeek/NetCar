@@ -1,7 +1,6 @@
 package com.imagine.scott.netcar.operation;
 
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.amap.api.maps.model.LatLng;
 import com.imagine.scott.netcar.bean.GasStation;
@@ -65,6 +64,7 @@ public class GasJSONOperate {
         }
         return all;
     }
+
     public static ArrayList<GasStation> getGasStations(ArrayList<Map<String, Object>> all) {
         TreeSet<GasStation> gasStationSet = new TreeSet<>();
         for (Map<String, Object> gasInfo : all) {
@@ -97,13 +97,14 @@ public class GasJSONOperate {
             gasStation.setGasPrice_90(Float.parseFloat(price90));
 
             gasStation.setFwlsmc((String) gasInfo.get("fwlsmc"));
-            gasStation.setDistance((Integer)gasInfo.get("distance"));
+            gasStation.setDistance((Integer) gasInfo.get("distance"));
             gasStationSet.add(gasStation);
         }
         ArrayList<GasStation> gasStationList = new ArrayList<>();
         gasStationList.addAll(gasStationSet);
         return new ArrayList<>(gasStationList.subList(0, 10));
     }
+
     public static Map<String, Object> getLatLngInfo(String jonString) throws Exception {
         JSONObject jsonObject = new JSONObject(jonString);
         JSONObject jsonResult = jsonObject.getJSONObject("result");

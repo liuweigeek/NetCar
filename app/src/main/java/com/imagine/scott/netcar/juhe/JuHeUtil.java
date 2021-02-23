@@ -1,7 +1,5 @@
 package com.imagine.scott.netcar.juhe;
 
-import android.util.Log;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -27,8 +25,7 @@ public class JuHeUtil {
         try {
             HttpResponse response = httpClient.execute(httpGet);
             return getResponseResult(response);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return "";
         }
@@ -50,8 +47,7 @@ public class JuHeUtil {
                 result += line;
             }
             return result;
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return "";
         }

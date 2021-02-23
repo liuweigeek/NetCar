@@ -14,7 +14,6 @@ import android.support.v7.widget.AppCompatSeekBar;
 import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -27,14 +26,12 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.imagine.scott.netcar.Constants;
 import com.imagine.scott.netcar.R;
 import com.imagine.scott.netcar.bean.GasStation;
 import com.imagine.scott.netcar.bean.Order;
 import com.imagine.scott.netcar.operation.Connection;
 import com.imagine.scott.netcar.operation.ResultJSONOperate;
 
-import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -228,9 +225,12 @@ public class AppoActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
     }
 
@@ -244,6 +244,7 @@ public class AppoActivity extends AppCompatActivity {
         addAppoResultContent.setText("0");
         addAppoResultUnit.setText(" 元");
     }
+
     public void switchToByMoney() {
         addAppoValueTitle.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.ic_text_money), null, null, null);
         addAppoValue.setMax(700);
@@ -272,6 +273,7 @@ public class AppoActivity extends AppCompatActivity {
         );
         dialog.show();
     }
+
     public void showTimeDialog() {
         Calendar c = Calendar.getInstance();
         Dialog dialog = new TimePickerDialog(AppoActivity.this,
@@ -280,7 +282,7 @@ public class AppoActivity extends AppCompatActivity {
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         orderCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
                         orderCalendar.set(Calendar.MINUTE, minute);
-                        SimpleDateFormat sf=new SimpleDateFormat("yyyy年MM月dd日HH时mm分");
+                        SimpleDateFormat sf = new SimpleDateFormat("yyyy年MM月dd日HH时mm分");
                         addAppoDatetimeText.setText(sf.format(orderCalendar.getTime()));
                     }
                 },

@@ -5,16 +5,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -93,6 +92,7 @@ public class CarDetailActivity extends AppCompatActivity {
         carDetailAvgecon = (TextView) findViewById(R.id.car_detail_avgecon);
         carDetailAirSacSafe = (ImageView) findViewById(R.id.car_detail_airsacsafe);
     }
+
     public void showInfo() {
         String carModelInfo = userCar.getCar().getVehicleBrandZh() + userCar.getCar().getVehicleModel();
         carDetailModel.setText(carModelInfo);
@@ -242,10 +242,10 @@ public class CarDetailActivity extends AppCompatActivity {
             mAuthTask = null;
             try {
                 switch (Integer.parseInt(ResultJSONOperate.getRegisterCode(result))) {
-                    case Constants.SCAN_USERCAR_SUCCESS :
+                    case Constants.SCAN_USERCAR_SUCCESS:
                         showInfo();
                         break;
-                    case Constants.SCAN_USERCAR_FAILED :
+                    case Constants.SCAN_USERCAR_FAILED:
                         break;
                 }
             } catch (Exception e) {
@@ -274,10 +274,10 @@ public class CarDetailActivity extends AppCompatActivity {
             delTask = null;
             try {
                 switch (Integer.parseInt(ResultJSONOperate.getRegisterCode(result))) {
-                    case Constants.DELETE_USERCAR_SUCCESS :
+                    case Constants.DELETE_USERCAR_SUCCESS:
                         finish();
                         break;
-                    case Constants.DELETE_USERCAR_FAILED :
+                    case Constants.DELETE_USERCAR_FAILED:
                         Toast.makeText(CarDetailActivity.this, "删除车辆失败", Toast.LENGTH_LONG).show();
                         break;
                 }

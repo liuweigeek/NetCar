@@ -1,25 +1,20 @@
 package com.imagine.scott.netcar.activity;
 
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -141,7 +136,7 @@ public class QueryPositionActivity extends AppCompatActivity implements PoiSearc
     }
 
     public boolean checkParamsToRoute() {
-        if (start_lng == 0 ||start_lat == 0 || finish_lng == 0 || finish_lat == 0) {
+        if (start_lng == 0 || start_lat == 0 || finish_lng == 0 || finish_lat == 0) {
             return false;
         }
         return true;
@@ -245,12 +240,13 @@ public class QueryPositionActivity extends AppCompatActivity implements PoiSearc
         query.setPageSize(15);// 设置每页最多返回多少条poiitem
         query.setPageNum(currentPage);// 设置查找页数
 
-        PoiSearch poiSearch = new PoiSearch(this,query);
+        PoiSearch poiSearch = new PoiSearch(this, query);
         poiSearch.setBound(new PoiSearch.SearchBound(new LatLonPoint(MapFragment.amapLocation.getLatitude(),
                 MapFragment.amapLocation.getLongitude()), 100000));//设置周边搜索的中心点以及区域
         poiSearch.setOnPoiSearchListener(this);//设置数据返回的监听器
         poiSearch.searchPOIAsyn();  //开始搜索
     }
+
     //region 高德搜索完成
     @Override
     public void onPoiSearched(PoiResult result, int rcode) {
@@ -260,7 +256,7 @@ public class QueryPositionActivity extends AppCompatActivity implements PoiSearc
             if (result != null && result.getQuery() != null) {// 搜索poi的结果
                 if (result.getQuery().equals(query)) {// 是否是同一条
                     poiResult = result;
-                    if (poiResult.getPois().size() <=0) {
+                    if (poiResult.getPois().size() <= 0) {
                         queryPositionListAdapter.notifyDataSetChanged();
                         queryPositionList.requestLayout();
                         Toast.makeText(this, "没有搜索到更多相关数据！", Toast.LENGTH_LONG).show();

@@ -61,7 +61,7 @@
                         android:paddingBottom="@dimen/activity_vertical_margin"
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"/>
+                        android:layout_width="wrap_content" />
 
                     <TextView
                         android:id="@+id/appo_detail_gasstation"
@@ -75,8 +75,9 @@
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:singleLine="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -97,7 +98,7 @@
                         android:paddingBottom="@dimen/activity_vertical_margin"
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"/>
+                        android:layout_width="wrap_content" />
 
                     <TextView
                         android:id="@+id/appo_detail_date"
@@ -111,8 +112,9 @@
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:singleLine="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -133,7 +135,7 @@
                         android:paddingBottom="@dimen/activity_vertical_margin"
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"/>
+                        android:layout_width="wrap_content" />
 
                     <TextView
                         android:id="@+id/appo_detail_brandname"
@@ -147,8 +149,9 @@
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:singleLine="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -169,7 +172,7 @@
                         android:paddingBottom="@dimen/activity_vertical_margin"
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"/>
+                        android:layout_width="wrap_content" />
 
                     <TextView
                         android:id="@+id/appo_detail_oiltype"
@@ -183,8 +186,9 @@
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:singleLine="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -205,7 +209,7 @@
                         android:paddingBottom="@dimen/activity_vertical_margin"
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"/>
+                        android:layout_width="wrap_content" />
 
                     <TextView
                         android:id="@+id/appo_detail_litre"
@@ -220,8 +224,9 @@
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:singleLine="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -242,7 +247,7 @@
                         android:paddingBottom="@dimen/activity_vertical_margin"
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"/>
+                        android:layout_width="wrap_content" />
 
                     <TextView
                         android:id="@+id/appo_detail_money"
@@ -257,7 +262,7 @@
                         android:paddingTop="@dimen/activity_vertical_margin"
                         android:singleLine="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
                 </RelativeLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -287,7 +292,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="QRCode"/>
+                android:contentDescription="QRCode" />
         </android.support.v7.widget.CardView>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

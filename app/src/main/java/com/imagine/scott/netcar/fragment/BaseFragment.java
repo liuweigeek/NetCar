@@ -6,6 +6,7 @@ public abstract class BaseFragment extends Fragment {
     public void onShowFragment() {
 
     }
+
     public void onDismissFragment() {
 
     }

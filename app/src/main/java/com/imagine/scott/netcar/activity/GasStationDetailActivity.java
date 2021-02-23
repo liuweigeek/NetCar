@@ -1,13 +1,11 @@
 package com.imagine.scott.netcar.activity;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -18,7 +16,6 @@ import com.amap.api.maps.MapView;
 import com.amap.api.maps.UiSettings;
 import com.amap.api.maps.model.BitmapDescriptorFactory;
 import com.amap.api.maps.model.LatLng;
-import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
 import com.imagine.scott.netcar.R;
 import com.imagine.scott.netcar.bean.GasStation;
@@ -143,6 +140,7 @@ public class GasStationDetailActivity extends AppCompatActivity {
         gasStationDetailPrice90.setTypeface(fontFace);
 
     }
+
     public void showInfo() {
         gasStationDetailPrice93.setText(Float.toString(gasStation.getGasPrice_93()));
         gasStationDetailPrice97.setText(Float.toString(gasStation.getGasPrice_97()));
@@ -155,6 +153,7 @@ public class GasStationDetailActivity extends AppCompatActivity {
         gasStationDetailExhaust.setText(gasStation.getExhaust());
         gasStationDetailFwlsmc.setText(gasStation.getFwlsmc());
     }
+
     private void setUpMap() {
         aMap = mMapView.getMap();
         aMap.setMapType(AMap.MAP_TYPE_NORMAL);

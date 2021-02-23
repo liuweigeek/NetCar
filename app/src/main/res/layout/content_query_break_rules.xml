@@ -75,6 +75,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -137,6 +138,7 @@
                         </RelativeLayout>
 
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:id="@+id/query_break_rules_vin_row"
                         android:layout_width="match_parent"
@@ -179,6 +181,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:id="@+id/query_break_rules_enginenum_row"
                         android:layout_width="match_parent"
@@ -235,7 +238,7 @@
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:elevation="2dp"/>
+                android:elevation="2dp" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

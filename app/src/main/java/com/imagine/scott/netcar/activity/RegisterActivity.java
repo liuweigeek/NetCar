@@ -3,23 +3,20 @@ package com.imagine.scott.netcar.activity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
-
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
-
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -102,7 +99,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
     }
 
     private boolean isPhoneValid(String phone) {
-        return  phone.length() >= 11 && "1".equals(phone.substring(0, 1));
+        return phone.length() >= 11 && "1".equals(phone.substring(0, 1));
     }
 
     public class UserRegisterTask extends AsyncTask<String, Void, String> {
@@ -207,6 +204,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                 // a primary phone address if the user hasn't specified one.
                 ContactsContract.Contacts.Data.IS_PRIMARY + " DESC");
     }
+
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
         List<String> phones = new ArrayList<>();
@@ -218,6 +216,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
 
         addPhonesToAutoComplete(phones);
     }
+
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
 

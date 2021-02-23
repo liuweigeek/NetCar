@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/add_mycar_form_view"
     android:background="#C3C3C3"
@@ -29,12 +28,12 @@
             android:layout_marginEnd="1dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:elevation="4dp"/>
+            android:elevation="4dp" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/vehiclemodelList"
             android:background="#FFFFFF"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
     </LinearLayout>
 </LinearLayout>

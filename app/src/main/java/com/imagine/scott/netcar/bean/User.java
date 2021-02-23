@@ -1,7 +1,7 @@
 package com.imagine.scott.netcar.bean;
 
-import java.util.Date;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,19 +11,19 @@ public class User {
 
     private Integer id;
     private String phone;
-    private String username;	//用户名
-    private String password;	//密码
-    private String sex;		//性别
-    private String drivingYears;	//驾龄
-    private String region;	//地区
-    private String headimage;	//头像存储路径
-    private String background;	//背景图片存储路径
+    private String username;    //用户名
+    private String password;    //密码
+    private String sex;        //性别
+    private String drivingYears;    //驾龄
+    private String region;    //地区
+    private String headimage;    //头像存储路径
+    private String background;    //背景图片存储路径
 
-    private List<UserCar> userCars = new ArrayList<>();	//拥有的车辆列表
-    private List<Order> orders = new ArrayList<>();	//订单列表
+    private List<UserCar> userCars = new ArrayList<>();    //拥有的车辆列表
+    private List<Order> orders = new ArrayList<>();    //订单列表
 
-    private Date registerDate;	//帐号注册时间
-    private Date modifyDate;	//帐号信息修改时间
+    private Date registerDate;    //帐号注册时间
+    private Date modifyDate;    //帐号信息修改时间
 
     public Integer getId() {
         return id;

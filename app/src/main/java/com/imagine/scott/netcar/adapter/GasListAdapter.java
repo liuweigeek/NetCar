@@ -1,7 +1,5 @@
 package com.imagine.scott.netcar.adapter;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,11 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.imagine.scott.netcar.R;
-import com.imagine.scott.netcar.activity.GasStationDetailActivity;
-import com.imagine.scott.netcar.activity.MainActivity;
 import com.imagine.scott.netcar.bean.GasStation;
-import com.imagine.scott.netcar.bean.UserCar;
-import com.imagine.scott.netcar.fragment.CarsFragment;
 import com.imagine.scott.netcar.fragment.GasStationFragment;
 import com.imagine.scott.netcar.operation.Transform;
 
@@ -42,6 +36,7 @@ public class GasListAdapter extends RecyclerView.Adapter<GasListAdapter.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public View listItem;
+
         public ViewHolder(View v) {
             super(v);
             listItem = v;
@@ -53,7 +48,7 @@ public class GasListAdapter extends RecyclerView.Adapter<GasListAdapter.ViewHold
 
         View listItem = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_gas_station, parent, false);
-  //      listItem.setBackgroundResource(mBackground);
+        //      listItem.setBackgroundResource(mBackground);
         ViewHolder vh = new ViewHolder(listItem);
         return vh;
     }

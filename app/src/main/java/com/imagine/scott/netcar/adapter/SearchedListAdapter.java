@@ -23,6 +23,7 @@ public class SearchedListAdapter extends RecyclerView.Adapter<SearchedListAdapte
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public View listItem;
+
         public ViewHolder(View v) {
             super(v);
             listItem = v;

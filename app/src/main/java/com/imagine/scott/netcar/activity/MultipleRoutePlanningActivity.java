@@ -1,37 +1,18 @@
 package com.imagine.scott.netcar.activity;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
-import com.amap.api.maps.model.BitmapDescriptorFactory;
 import com.amap.api.maps.model.LatLng;
-import com.amap.api.maps.model.Marker;
-import com.amap.api.maps.model.MarkerOptions;
 import com.amap.api.navi.AMapNavi;
 import com.amap.api.navi.AMapNaviListener;
 import com.amap.api.navi.enums.PathPlanningStrategy;
@@ -54,7 +35,6 @@ import com.imagine.scott.netcar.util.TTSController;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 /**
  * 创建时间：15/12/7 18:11
@@ -273,6 +253,7 @@ public class MultipleRoutePlanningActivity extends AppCompatActivity implements 
         super.onResume();
         mapView.onResume();
     }
+
     /**
      * 方法必须重写
      */
@@ -281,6 +262,7 @@ public class MultipleRoutePlanningActivity extends AppCompatActivity implements 
         super.onPause();
         mapView.onPause();
     }
+
     /**
      * 方法必须重写
      */
@@ -289,6 +271,7 @@ public class MultipleRoutePlanningActivity extends AppCompatActivity implements 
         super.onSaveInstanceState(outState);
         mapView.onSaveInstanceState(outState);
     }
+
     /**
      * 方法必须重写
      */
@@ -300,54 +283,104 @@ public class MultipleRoutePlanningActivity extends AppCompatActivity implements 
         ttsManager.destroy();
         aMapNavi.destroy();
     }
+
     @Override
-    public void notifyParallelRoad(int i) {}
+    public void notifyParallelRoad(int i) {
+    }
+
     @Override
-    public void OnUpdateTrafficFacility(AMapNaviTrafficFacilityInfo[] aMapNaviTrafficFacilityInfos) {}
+    public void OnUpdateTrafficFacility(AMapNaviTrafficFacilityInfo[] aMapNaviTrafficFacilityInfos) {
+    }
+
     @Override
-    public void updateAimlessModeStatistics(AimLessModeStat aimLessModeStat) {}
+    public void updateAimlessModeStatistics(AimLessModeStat aimLessModeStat) {
+    }
+
     @Override
-    public void updateAimlessModeCongestionInfo(AimLessModeCongestionInfo aimLessModeCongestionInfo) {}
+    public void updateAimlessModeCongestionInfo(AimLessModeCongestionInfo aimLessModeCongestionInfo) {
+    }
+
     @Override
-    public void onInitNaviFailure() {}
+    public void onInitNaviFailure() {
+    }
+
     @Override
-    public void onInitNaviSuccess() {}
+    public void onInitNaviSuccess() {
+    }
+
     @Override
-    public void onStartNavi(int type) {}
+    public void onStartNavi(int type) {
+    }
+
     @Override
-    public void onTrafficStatusUpdate() {}
+    public void onTrafficStatusUpdate() {
+    }
+
     @Override
-    public void onLocationChange(AMapNaviLocation location) {}
+    public void onLocationChange(AMapNaviLocation location) {
+    }
+
     @Override
-    public void onGetNavigationText(int type, String text) {}
+    public void onGetNavigationText(int type, String text) {
+    }
+
     @Override
-    public void onEndEmulatorNavi() {}
+    public void onEndEmulatorNavi() {
+    }
+
     @Override
-    public void onArriveDestination() {}
+    public void onArriveDestination() {
+    }
+
     @Override
-    public void onCalculateRouteFailure(int errorInfo) {}
+    public void onCalculateRouteFailure(int errorInfo) {
+    }
+
     @Override
-    public void onReCalculateRouteForYaw() {}
+    public void onReCalculateRouteForYaw() {
+    }
+
     @Override
-    public void onReCalculateRouteForTrafficJam() {}
+    public void onReCalculateRouteForTrafficJam() {
+    }
+
     @Override
-    public void onArrivedWayPoint(int wayID) {}
+    public void onArrivedWayPoint(int wayID) {
+    }
+
     @Override
-    public void onGpsOpenStatus(boolean enabled) {}
+    public void onGpsOpenStatus(boolean enabled) {
+    }
+
     @Override
-    public void onNaviInfoUpdated(AMapNaviInfo naviInfo) {}
+    public void onNaviInfoUpdated(AMapNaviInfo naviInfo) {
+    }
+
     @Override
-    public void onNaviInfoUpdate(NaviInfo naviinfo) {}
+    public void onNaviInfoUpdate(NaviInfo naviinfo) {
+    }
+
     @Override
-    public void OnUpdateTrafficFacility(TrafficFacilityInfo trafficFacilityInfo) {}
+    public void OnUpdateTrafficFacility(TrafficFacilityInfo trafficFacilityInfo) {
+    }
+
     @Override
-    public void OnUpdateTrafficFacility(AMapNaviTrafficFacilityInfo aMapNaviTrafficFacilityInfo) {}
+    public void OnUpdateTrafficFacility(AMapNaviTrafficFacilityInfo aMapNaviTrafficFacilityInfo) {
+    }
+
     @Override
-    public void showCross(AMapNaviCross aMapNaviCross) {}
+    public void showCross(AMapNaviCross aMapNaviCross) {
+    }
+
     @Override
-    public void hideCross() {}
+    public void hideCross() {
+    }
+
     @Override
-    public void showLaneInfo(AMapLaneInfo[] laneInfos, byte[] laneBackgroundInfo, byte[] laneRecommendedInfo) {}
+    public void showLaneInfo(AMapLaneInfo[] laneInfos, byte[] laneBackgroundInfo, byte[] laneRecommendedInfo) {
+    }
+
     @Override
-    public void hideLaneInfo() {}
+    public void hideLaneInfo() {
+    }
 }

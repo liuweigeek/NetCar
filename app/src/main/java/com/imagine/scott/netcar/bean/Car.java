@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * Created by Scott on 2016/5/5.
- *
+ * <p>
  * 汽车
  */
 public class Car implements Serializable {
@@ -22,36 +22,47 @@ public class Car implements Serializable {
     public Integer getId() {
         return id;
     }
+
     public void setId(Integer id) {
         this.id = id;
     }
+
     public String getVehicleBrand() {
         return vehicleBrand;
     }
+
     public void setVehicleBrand(String vehicleBrand) {
         this.vehicleBrand = vehicleBrand;
     }
+
     public String getVehicleBrandZh() {
         return vehicleBrandZh;
     }
+
     public void setVehicleBrandZh(String vehicleBrandZh) {
         this.vehicleBrandZh = vehicleBrandZh;
     }
+
     public String getVehicleModel() {
         return vehicleModel;
     }
+
     public void setVehicleModel(String vehicleModel) {
         this.vehicleModel = vehicleModel;
     }
+
     public Integer getDoorNum() {
         return doorNum;
     }
+
     public void setDoorNum(Integer doorNum) {
         this.doorNum = doorNum;
     }
+
     public Integer getSeatNum() {
         return seatNum;
     }
+
     public void setSeatNum(Integer seatNum) {
         this.seatNum = seatNum;
     }

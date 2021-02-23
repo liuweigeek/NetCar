@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -10,6 +9,7 @@
         android:layout_gravity="center_vertical"
         android:layout_width="48dp"
         android:layout_height="48dp" />
+
     <TextView
         android:id="@+id/item_vehiclebrand_name"
         android:textSize="18sp"

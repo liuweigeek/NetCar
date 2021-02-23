@@ -20,70 +20,70 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProvinceListActivity extends AppCompatActivity {
-	private ListView provinceListView;
-	private CityModelListAdapter mAdapter;
+    private ListView provinceListView;
+    private CityModelListAdapter mAdapter;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.activity_city_list);
-		Toolbar toolbar = (Toolbar) findViewById(R.id.city_list_toolbar);
-		setSupportActionBar(toolbar);
-		getSupportActionBar().setTitle("选择省份");
-		provinceListView = (ListView) findViewById(R.id.city_list_listview);
+        setContentView(R.layout.activity_city_list);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.city_list_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("选择省份");
+        provinceListView = (ListView) findViewById(R.id.city_list_listview);
 
-		mAdapter = new CityModelListAdapter(this, getData2());
-		provinceListView.setAdapter(mAdapter);
+        mAdapter = new CityModelListAdapter(this, getData2());
+        provinceListView.setAdapter(mAdapter);
 
-		provinceListView.setOnItemClickListener(new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-									int position, long id) {
+        provinceListView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
 
-				TextView itemCityModelName = (TextView) view.findViewById(R.id.item_city_model_name);
+                TextView itemCityModelName = (TextView) view.findViewById(R.id.item_city_model_name);
 
-				Intent intent = new Intent();
-				intent.putExtra("province_name", itemCityModelName.getText());
-				intent.putExtra("province_id", itemCityModelName.getTag().toString());
+                Intent intent = new Intent();
+                intent.putExtra("province_name", itemCityModelName.getText());
+                intent.putExtra("province_id", itemCityModelName.getTag().toString());
 
-				intent.setClass(ProvinceListActivity.this, CityListActivity.class);
-				startActivityForResult(intent, 20);
-			}
-		});
+                intent.setClass(ProvinceListActivity.this, CityListActivity.class);
+                startActivityForResult(intent, 20);
+            }
+        });
 
-	}
+    }
 
-	private List<CityListModel> getData2() {
+    private List<CityListModel> getData2() {
 
-		List<CityListModel> list = new ArrayList<CityListModel>();
-		List<ProvinceInfoJson> provinceList = WeizhangClient.getAllProvince();
+        List<CityListModel> list = new ArrayList<CityListModel>();
+        List<ProvinceInfoJson> provinceList = WeizhangClient.getAllProvince();
 
-		for (ProvinceInfoJson provinceInfoJson : provinceList) {
-			String provinceName = provinceInfoJson.getProvinceName();
-			int provinceId = provinceInfoJson.getProvinceId();
-			
-			CityListModel model = new CityListModel();
-			model.setTextName(provinceName);
-			model.setNameId(provinceId);
-			list.add(model);
-		}
-		return list;
-	}
+        for (ProvinceInfoJson provinceInfoJson : provinceList) {
+            String provinceName = provinceInfoJson.getProvinceName();
+            int provinceId = provinceInfoJson.getProvinceId();
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (data == null)
-			return;
-		Bundle bundle = data.getExtras();
-		// ��ȡ����name
-		String cityName = bundle.getString("city_name");
-		String cityId = bundle.getString("city_id");
+            CityListModel model = new CityListModel();
+            model.setTextName(provinceName);
+            model.setNameId(provinceId);
+            list.add(model);
+        }
+        return list;
+    }
 
-		Intent intent = new Intent();
-		intent.putExtra("city_name", cityName);
-		intent.putExtra("city_id", cityId);
-		setResult(1, intent);
-		finish();
-	}
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data == null)
+            return;
+        Bundle bundle = data.getExtras();
+        // ��ȡ����name
+        String cityName = bundle.getString("city_name");
+        String cityId = bundle.getString("city_id");
+
+        Intent intent = new Intent();
+        intent.putExtra("city_name", cityName);
+        intent.putExtra("city_id", cityId);
+        setResult(1, intent);
+        finish();
+    }
 }

@@ -33,6 +33,7 @@ public class AppointmentListAdapter extends RecyclerView.Adapter<AppointmentList
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public View listItem;
+
         public ViewHolder(View v) {
             super(v);
             listItem = v;
@@ -68,7 +69,7 @@ public class AppointmentListAdapter extends RecyclerView.Adapter<AppointmentList
                 itemAppoGasLogo.setImageDrawable(appointmentFragment.getResources().getDrawable(R.drawable.logo_gas_station));
         }
         itemAppoGasname.setText(orders.get(position).getGasStation());
-        SimpleDateFormat sf=new SimpleDateFormat("yyyy年MM月dd日HH时mm分");
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy年MM月dd日HH时mm分");
         itemAppoTime.setText(sf.format(orders.get(position).getDate()));
         holder.listItem.setOnClickListener(new View.OnClickListener() {
             @Override

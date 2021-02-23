@@ -27,13 +27,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-    <!--            <com.imagine.scott.netcar.widget.CircleImageView
-                android:id="@+id/login_form_headimage"
-                android:src="@drawable/headimage"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="16dp"
-                android:layout_width="96dp"
-                android:layout_height="96dp" />-->
+            <!--            <com.imagine.scott.netcar.widget.CircleImageView
+                        android:id="@+id/login_form_headimage"
+                        android:src="@drawable/headimage"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"

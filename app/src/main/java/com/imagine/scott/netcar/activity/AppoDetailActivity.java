@@ -129,9 +129,10 @@ public class AppoDetailActivity extends AppCompatActivity {
         appoDetailLitre.setTypeface(fontFace);
         appoDetailMoney.setTypeface(fontFace);
     }
+
     public void showInfo() {
         appoDetailGasStationName.setText(order.getGasStation());
-        SimpleDateFormat sf=new SimpleDateFormat("yyyy年MM月dd日HH时mm分");
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy年MM月dd日HH时mm分");
         appoDetailDate.setText(sf.format(order.getDate()));
         appoDetailBrandName.setText(order.getBrandname());
         appoDetailOilType.setText(order.getOilType());
@@ -156,6 +157,7 @@ public class AppoDetailActivity extends AppCompatActivity {
         }
 
     }
+
     private void setUpMap() {
         aMap = mMapView.getMap();
         aMap.setMapType(AMap.MAP_TYPE_NORMAL);
@@ -222,10 +224,10 @@ public class AppoDetailActivity extends AppCompatActivity {
             delTask = null;
             try {
                 switch (Integer.parseInt(ResultJSONOperate.getRegisterCode(result))) {
-                    case Constants.DELETE_ORDER_SUCCESS :
+                    case Constants.DELETE_ORDER_SUCCESS:
                         finish();
                         break;
-                    case Constants.DELETE_ORDER_FAILED :
+                    case Constants.DELETE_ORDER_FAILED:
                         Toast.makeText(AppoDetailActivity.this, "删除订单失败", Toast.LENGTH_LONG).show();
                         break;
                 }

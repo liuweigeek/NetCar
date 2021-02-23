@@ -1,28 +1,29 @@
 package com.imagine.scott.netcar.activity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
+import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.FragmentTransaction;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.text.TextUtils;
-import android.view.KeyEvent;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cheshouye.api.client.WeizhangIntentService;
+import com.igexin.sdk.PushManager;
 import com.imagine.scott.netcar.R;
 import com.imagine.scott.netcar.dialog.SetServerAddrDialog;
 import com.imagine.scott.netcar.fragment.AppointmentFragment;
@@ -35,8 +36,6 @@ import com.imagine.scott.netcar.fragment.MusicFragment;
 import com.imagine.scott.netcar.fragment.NotificationFragment;
 import com.imagine.scott.netcar.fragment.SettingFragment;
 import com.imagine.scott.netcar.widget.CircleImageView;
-
-import com.igexin.sdk.PushManager;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
@@ -132,10 +131,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)
-    {
-        if (keyCode == KeyEvent.KEYCODE_BACK )
-        {
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
             if (currentFragment != null) {
                 if (currentFragment != mapFragment) {
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -256,6 +253,7 @@ public class MainActivity extends AppCompatActivity
             transaction.add(R.id.container, entry.getValue());
         }
     }
+
     //隐藏全部Fragment
     public void transactionHide(FragmentTransaction transaction) {
         for (Map.Entry<Integer, BaseFragment> entry : fragments.entrySet()) {
@@ -310,7 +308,7 @@ public class MainActivity extends AppCompatActivity
         setTitle(item.getTitle());
         BaseFragment fragment = fragments.get(item.getItemId());
 
-        if(fragment != currentFragment) {
+        if (fragment != currentFragment) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transactionHide(transaction);
             currentFragment.onDismissFragment();

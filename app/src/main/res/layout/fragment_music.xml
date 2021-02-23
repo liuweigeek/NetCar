@@ -55,6 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
@@ -76,6 +77,7 @@
                     android:paddingRight="8dp"
                     android:layout_width="48dp"
                     android:layout_height="48dp" />
+
                 <ImageButton
                     android:id="@+id/music_play"
                     android:background="@android:color/transparent"
@@ -89,6 +91,7 @@
                     android:paddingRight="8dp"
                     android:layout_width="48dp"
                     android:layout_height="48dp" />
+
                 <ImageButton
                     android:id="@+id/music_foward"
                     android:background="@android:color/transparent"
@@ -120,6 +123,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
-        tools:context=".fragment.MusicFragment"/>
+        tools:context=".fragment.MusicFragment" />
 
 </RelativeLayout>

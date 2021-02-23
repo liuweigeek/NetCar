@@ -2,13 +2,7 @@ package com.imagine.scott.netcar.operation;
 
 import android.util.Log;
 
-import com.imagine.scott.netcar.activity.MainActivity;
-
 import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
