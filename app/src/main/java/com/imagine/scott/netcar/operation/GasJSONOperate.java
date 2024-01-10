@@ -9,9 +9,11 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 /**
  * Created by Scott on 2016/5/11.
@@ -100,9 +102,11 @@ public class GasJSONOperate {
             gasStation.setDistance((Integer) gasInfo.get("distance"));
             gasStationSet.add(gasStation);
         }
-        ArrayList<GasStation> gasStationList = new ArrayList<>();
-        gasStationList.addAll(gasStationSet);
-        return new ArrayList<>(gasStationList.subList(0, 10));
+        ArrayList<GasStation> gasStationList = new ArrayList<>(gasStationSet);
+        return gasStationList.stream()
+                .sorted(Comparator.comparingInt(GasStation::getDistance))
+                .limit(10)
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     public static Map<String, Object> getLatLngInfo(String jonString) throws Exception {
