@@ -38,3 +38,6 @@ Thumbs.db
 
 #NDK
 obj/
+
+#Jenv
+/Users/scott/Developer/Android/NetCar/.java-version
