@@ -1,2 +1,3 @@
 include ':app'
-include ':libzxing'
+include ':zxing'
+include ':fab-speed-dial'

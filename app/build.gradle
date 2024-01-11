@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace 'com.imagine.scott.netcar'
     useLibrary 'org.apache.http.legacy'
     signingConfigs {
         config {
@@ -10,11 +11,10 @@ android {
             storePassword '12345678'
         }
     }
-    compileSdkVersion 28
-    buildToolsVersion '30.0.2'
     defaultConfig {
         applicationId "com.imagine.scott.netcar"
         minSdkVersion 21
+        compileSdk 28
         targetSdkVersion 28
         versionCode 1
         versionName '1.5'
@@ -49,8 +49,8 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
     implementation 'com.android.support:gridlayout-v7:28.0.0'
-    implementation 'io.github.yavski:fab-speed-dial:1.0.6'
-    implementation project(':libzxing')
+    implementation project(':zxing')
+    implementation project(':fab-speed-dial')
     /*implementation files('libs/juhe_sdk_v_2_1.jar')
     implementation files('libs/weizhang_sdk.jar')
     implementation files('libs/GetuiExt-2.0.3.jar')
