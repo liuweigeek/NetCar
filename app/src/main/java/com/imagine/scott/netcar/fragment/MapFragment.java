@@ -55,6 +55,7 @@ import com.imagine.scott.netcar.operation.GasJSONOperate;
 import com.imagine.scott.netcar.operation.Transform;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -326,6 +327,7 @@ public class MapFragment extends BaseFragment implements LocationSource,
                 try {
                     ArrayList<Map<String, Object>> allReason = GasJSONOperate.getGasInformation(result);
                     ArrayList<GasStation> gasStationList = GasJSONOperate.getGasStations(allReason);
+                    Collections.sort(gasStationList, (g1, g2) -> Integer.compare(g1.getDistance(), g2.getDistance()));
                     onGasSearched(gasStationList);
                 } catch (Exception e) {
                     e.printStackTrace();
