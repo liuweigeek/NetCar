@@ -5,10 +5,14 @@ android {
     useLibrary 'org.apache.http.legacy'
     signingConfigs {
         config {
-            keyAlias 'netcar'
-            keyPassword '12345678'
-            storeFile file('/Users/scott/Data/key/netcar.keystore')
-            storePassword '12345678'
+            try {
+                keyAlias 'netcar'
+                keyPassword KEY_PASSWORD
+                storeFile file('../key/netcar.keystore')
+                storePassword KEYSTORE_PASSWORD
+            } catch (ignored) {
+                throw new InvalidUserDataException("You should define KEY_PASSWORD and KEYSTORE_PASSWORD in gradle.properties.")
+            }
         }
     }
     defaultConfig {
